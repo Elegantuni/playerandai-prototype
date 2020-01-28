@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __CHARACTER_H
+#define __CHARACTER_H
 
 struct charactertemp
 {
@@ -10,3 +11,6 @@ struct charactertemp
 	int randomcharacter;
 	int magicresist;
 };
+
+#endif
+

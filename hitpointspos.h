@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __HITPOINTSPOS_H
+#define __HITPOINTSPOS_H
 
 struct hitpointspos
 {
@@ -7,3 +8,6 @@ struct hitpointspos
 	int ay;
 	int ax;
 };
+
+#endif
+

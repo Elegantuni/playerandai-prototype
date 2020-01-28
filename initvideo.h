@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __INITVIDEO_H
+#define __INITVIDEO_H
 
 #ifdef INITLIBTCODNOW
 #include "libtcod/libtcod.hpp"
@@ -13,3 +14,6 @@
 #endif
 
 void initvideo(int hitpointsy, int hitpointsx);
+
+#endif
+

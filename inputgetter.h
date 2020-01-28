@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __INPUTGETTER_H
+#define __INPUTGETTER_H
 
 #ifdef INITLIBTCODNOW
 #include "libtcodinput.h"
@@ -9,3 +10,6 @@
 #endif
 
 void* inputgetter();
+
+#endif
+

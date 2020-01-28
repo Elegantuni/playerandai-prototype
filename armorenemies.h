@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ARMORENEMIES_H
+#define __ARMORENEMIES_H
 
 struct armorenemies
 {
@@ -13,3 +14,6 @@ struct armorenemies
 	int nextrandomarmor2;
 	int armorcount;
 };
+
+#endif
+

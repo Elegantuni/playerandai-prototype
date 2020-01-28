@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __AICHARACTER_H
+#define __AICHARACTER_H
 
 struct aicharacter
 {
@@ -27,3 +28,6 @@ struct aicharacter
 	struct magicenemies magic1;
 	struct armorenemies armor1;
 };
+
+#endif
+

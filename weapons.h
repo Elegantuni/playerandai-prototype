@@ -1,15 +1,19 @@
-#pragma once
+#ifndef __WEAPONS_H
+#define __WEAPONS_H
+
+#include "globaldefs.h"
 
 struct weapons
 {
 	char* equiped;
-	char* item[allitems];
 	int damage;
 	int rangey;
 	int rangex;
-	int numberitems;
-	int randomweapon;
-	int nextrandomweapon;
-	int nextrandomweapon2;
-	int weaponcount;
+	char* statuseffects[STATUSEFFECTSAMOUNT];
+	char* durability;
+	int timeleft;
+	int temporarytimeleft;
 };
+
+#endif
+

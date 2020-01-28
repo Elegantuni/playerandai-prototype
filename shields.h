@@ -1,13 +1,15 @@
-#pragma once
+#ifndef __SHIELDS_H
+#define __SHIELDS_H
 
 struct shields
 {
 	char* equiped;
-	char* item[alldefenseitems];
+	char* item[ALLDEFENSEITEMS];
 	int damage;
 	int numberitems;
-	int randomshield;
-	int nextrandomshield;
-	int nextrandomshield2;
+	int randomshield[SHIELDAMOUNT];
 	int shieldcount;
 };
+
+#endif
+

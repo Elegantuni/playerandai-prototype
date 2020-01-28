@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ALLDEFINES_H
+#define __ALLDEFINES_H
 
 #define playercharacters 4
 
@@ -19,3 +20,6 @@
 
 #define allarmor 5
 #define allarmorenemies 5
+
+#endif
+

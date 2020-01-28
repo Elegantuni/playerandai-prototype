@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __FREEBSDDEPENDS_H
+#define __FREEBSDDEPENDS_H
 
 #ifdef INITOPENINDIANA
 #include <cstdlib>
@@ -19,3 +20,6 @@ size_t strnlen(const char *str, size_t len);
 #endif
 
 char *strndup(const char *str, size_t len);
+
+#endif
+
