@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ARMOR_H
+#define __ARMOR_H
 
 struct armor
 {
@@ -6,10 +7,11 @@ struct armor
 	int protection;
 	int rangey;
 	int rangex;
-	int protections[allarmor];
+	int protections[ARMORAMOUNT];
 	char *item[allarmor];
-	int randomarmor;
-	int nextrandomarmor;
-	int nextrandomarmor2;
+	int randomarmor[ARMORAMOUNT];
 	int armorcount;
 };
+
+#endif
+

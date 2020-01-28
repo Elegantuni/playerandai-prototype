@@ -1,4 +1,10 @@
-#pragma once
+#ifndef __PLAYER_H
+#define __PLAYER_H
+
+#include "globaldefs.h"
+#include "movement.h"
+#include "weapons.h"
+#include "thiefing.h"
 
 struct player
 {
@@ -17,13 +23,16 @@ struct player
 	int count;
 	int replayer;
 	int playerturn;
-	struct weapons weapontype;
-	struct weaponsdamage weaponsdamage1;
 	int randomitem;
-	struct shields shieldstype;
-	struct shieldsdamage shieldsdamage1;
 	int shieldsrandomitem;
-	struct charactertemp character1;
-	struct magic magic1;
-	struct armor armor1;
+	struct movement playermovement[PLAYERMOVE];
+	struct weapons playerweapons[WEAPONSAMOUNT];
+	struct thiefing playerthiefing[THIEFINGAMOUNT];
+	struct shields playershield[SHIELDAMOUNT];
+	struct character playercharacter[CHARACTERAMOUNT];
+	struct magic playermagic[MAGICAMOUNT];
+	struct armor playerarmor[ARMORAMOUNT];
 };
+
+#endif
+
