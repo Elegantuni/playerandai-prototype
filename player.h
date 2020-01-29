@@ -5,6 +5,8 @@
 #include "movement.h"
 #include "weapons.h"
 #include "thiefing.h"
+#include "classes.h"
+#include "jobs.h"
 
 struct player
 {
@@ -14,6 +16,9 @@ struct player
 	int hitpoints;
 	int magicpoints;
 	int defensepoints;
+	int hitpointsadjust;
+	int magicpointsadjust;
+	int defensepointsadjust;
 	char* weapon;
 	char* shield;
 	char* charactersign;
@@ -33,6 +38,7 @@ struct player
 	struct magic playermagic[MAGICAMOUNT];
 	struct armor playerarmor[ARMORAMOUNT];
 	struct classes playerclass[CLASSAMOUNT];
+	struct jobs playerjob[JOBAMOUNT];
 };
 
 #endif

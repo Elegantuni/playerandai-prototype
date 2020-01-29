@@ -1,6 +1,13 @@
 #ifndef __AICHARACTER_H
 #define __AICHARACTER_H
 
+#include "globaldefs.h"
+#include "movement.h"
+#include "weapons.h"
+#include "thiefing.h"
+#include "classes.h"
+#include "jobs.h"
+
 struct aicharacter
 {
 	int thenumber;
@@ -9,6 +16,9 @@ struct aicharacter
 	int hitpoints;
 	int magicpoints;
 	int defensepoints;
+	int hitpointsadjust;
+	int magicpointsadjust;
+	int defensepointsadjust;
 	char* weapon;
 	char* shield;
 	char* charactersign;
@@ -18,16 +28,17 @@ struct aicharacter
 	int count;
 	int replayer;
 	int playerturn;
-	struct weaponsenemies weapontype;
-	struct weaponsdamageenemies weaponsdamage1;
 	int randomitem;
-	struct shieldsenemies shieldstype;
-	struct shieldsdamageenemies shieldsdamage1;
 	int shieldsrandomitem;
-	struct charactertemp character1;
-	struct magicenemies magic1;
-	struct armorenemies armor1;
+	struct movement aimovement[AIMOVE];
+	struct weapons aiweapons[WEAPONSAMOUNT];
+	struct thiefing aithiefing[THIEFINGAMOUNT];
+	struct shields aishield[SHIELDAMOUNT];
+	struct character aicharacter[CHARACTERAMOUNT];
+	struct magic aimagic[MAGICAMOUNT];
+	struct armor aiarmor[ARMORAMOUNT];
 	struct classes aiclasses[CLASSAMOUNT];
+	struct jobs aijob[JOBAMOUNT];
 };
 
 #endif

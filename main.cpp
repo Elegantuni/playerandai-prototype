@@ -343,14 +343,17 @@ beginning:
 
 		for(int i = 0; i < maxplayers; i++)
 		{
-			myplayer[i].weaponsdamage1.damage = (int *)malloc(sizeof(int) * allitems);
-			myplayer[i].weaponsdamage1.rangex = (int *)malloc(sizeof(int) * allitems);
-			myplayer[i].weaponsdamage1.rangey = (int *)malloc(sizeof(int) * allitems);
+			for(int j = 0; j < WEAPONSAMOUNT; j++)
+			{
+				myplayer[i].playerweapons[j].damage = 0;
+				myplayer[i].playerweapons[j].rangex = 0;
+				myplayer[i].playerweapons[j].rangey = 0;
+			}
 		}
 
 		for(int i = 0; i < maxplayers; i++)
 		{
-			myplayer[i].shieldsdamage1.damage = (int *)malloc(sizeof(int) * alldefenseitems);
+			myplayer[i].playershield.damage = (int *)malloc(sizeof(int) * alldefenseitems);
 		}
 
 		for(int i = 0; i < maxenemies; i++)
