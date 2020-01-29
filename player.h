@@ -32,6 +32,7 @@ struct player
 	struct character playercharacter[CHARACTERAMOUNT];
 	struct magic playermagic[MAGICAMOUNT];
 	struct armor playerarmor[ARMORAMOUNT];
+	struct classes playerclass[CLASSAMOUNT];
 };
 
 #endif

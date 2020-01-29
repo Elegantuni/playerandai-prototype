@@ -27,6 +27,7 @@ struct aicharacter
 	struct charactertemp character1;
 	struct magicenemies magic1;
 	struct armorenemies armor1;
+	struct classes aiclasses[CLASSAMOUNT];
 };
 
 #endif
