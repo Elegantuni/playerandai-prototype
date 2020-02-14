@@ -7,6 +7,7 @@
 #include "thiefing.h"
 #include "classes.h"
 #include "jobs.h"
+#include "character.h"
 
 struct player
 {

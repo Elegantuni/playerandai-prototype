@@ -1,6 +1,8 @@
 #ifndef __MAGIC_H
 #define __MAGIC_H
 
+#include "globaldefs.h"
+
 struct magic
 {
 	char* equiped;

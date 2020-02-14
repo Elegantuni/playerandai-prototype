@@ -6,6 +6,7 @@
 struct weapons
 {
 	char* equiped;
+	char* item;
 	int damage;
 	int rangey;
 	int rangex;

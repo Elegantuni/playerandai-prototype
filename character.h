@@ -1,7 +1,7 @@
 #ifndef __CHARACTER_H
 #define __CHARACTER_H
 
-struct charactertemp
+struct character
 {
 	char* character;
 	char* sign;
