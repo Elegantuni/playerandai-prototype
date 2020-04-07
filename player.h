@@ -8,6 +8,7 @@
 #include "classes.h"
 #include "jobs.h"
 #include "character.h"
+#include "weaponsdamage.h"
 
 struct player
 {
@@ -32,14 +33,16 @@ struct player
 	int randomitem;
 	int shieldsrandomitem;
 	struct movement playermovement[PLAYERMOVE];
-	struct weapons playerweapons[WEAPONSAMOUNT];
-	struct thiefing playerthiefing[THIEFINGAMOUNT];
-	struct shields playershield[SHIELDAMOUNT];
-	struct character playercharacter[CHARACTERAMOUNT];
-	struct magic playermagic[MAGICAMOUNT];
-	struct armor playerarmor[ARMORAMOUNT];
-	struct classes playerclass[CLASSAMOUNT];
-	struct jobs playerjob[JOBAMOUNT];
+	struct weapons playerweapons;
+	struct weaponsdamage playerweaponsdamage;
+	struct thiefing playerthiefing;
+	struct shields playershield;
+	struct shieldsdamage playershielddamage;
+	struct character playercharacter;
+	struct magic playermagic;
+	struct armor playerarmor;
+	struct classes playerclass;
+	struct jobs playerjob;
 };
 
 #endif

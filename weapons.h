@@ -6,14 +6,17 @@
 struct weapons
 {
 	char* equiped;
-	char* item;
+	char* item[WEAPONSAMOUNT];
 	int damage;
 	int rangey;
 	int rangex;
 	char* statuseffects[STATUSEFFECTSAMOUNT];
-	char* durability;
+	char* durability[WEAPONSAMOUNT];
 	int timeleft;
 	int temporarytimeleft;
+	int numberitems;
+	int weaponcount;
+	int randomweapon[WEAPONSAMOUNT];
 };
 
 #endif

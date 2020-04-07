@@ -7,6 +7,7 @@
 #include "thiefing.h"
 #include "classes.h"
 #include "jobs.h"
+#include "weaponsdamageenemies.h"
 
 struct aicharacter
 {
@@ -31,14 +32,15 @@ struct aicharacter
 	int randomitem;
 	int shieldsrandomitem;
 	struct movement aimovement[AIMOVE];
-	struct weapons aiweapons[WEAPONSAMOUNT];
-	struct thiefing aithiefing[THIEFINGAMOUNT];
-	struct shields aishield[SHIELDAMOUNT];
-	struct character aicharacter[CHARACTERAMOUNT];
-	struct magic aimagic[MAGICAMOUNT];
-	struct armor aiarmor[ARMORAMOUNT];
-	struct classes aiclasses[CLASSAMOUNT];
-	struct jobs aijob[JOBAMOUNT];
+	struct weapons aiweapons;
+	struct weaponsdamageenemies aiweaponsdamage;
+	struct thiefing aithiefing;
+	struct shields aishield;
+	struct character aicharacter;
+	struct magic aimagic;
+	struct armor aiarmor;
+	struct classes aiclasses;
+	struct jobs aijob;
 };
 
 #endif

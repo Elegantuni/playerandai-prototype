@@ -6,10 +6,10 @@
 struct shields
 {
 	char* equiped;
-	char* item;
+	char* item[SHIELDAMOUNT];
 	int damage;
 	int numberitems;
-	int randomshield;
+	int randomshield[SHIELDAMOUNT];
 	int shieldcount;
 };
 

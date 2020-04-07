@@ -8,7 +8,7 @@ struct armor
 	int rangey;
 	int rangex;
 	int protections[ARMORAMOUNT];
-	char *item;
+	char *item[ARMORAMOUNT];
 	int randomarmor[ARMORAMOUNT];
 	int armorcount;
 };
