@@ -36,6 +36,7 @@ struct aicharacter
 	struct weaponsdamageenemies aiweaponsdamage;
 	struct thiefing aithiefing;
 	struct shields aishield;
+	struct shieldsdamageenemies aishieldsdamage;
 	struct character aicharacter;
 	struct magic aimagic;
 	struct armor aiarmor;

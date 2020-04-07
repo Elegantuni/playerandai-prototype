@@ -6,8 +6,6 @@ struct shieldsenemies
 	char* item[alldefenseitemsenemies];
 	int damage;
 	int numberitems;
-	int randomshield;
-	int nextrandomshield;
-	int nextrandomshield2;
+	int randomshield[SHIELDAMOUNT];
 	int shieldcount;
 };

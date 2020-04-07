@@ -8,8 +8,6 @@ struct weaponsenemies
 	int rangey;
 	int rangex;
 	int numberitems;
-	int randomweapon;
-	int nextrandomweapon;
-	int nextrandomweapon2;
+	int randomweapon[WEAPONSAMOUNT];
 	int weaponcount;
 };
