@@ -1267,7 +1267,7 @@ beginning:
 			myai[i].aishield.damage = shielddamageenemies[myai[i].shieldsrandomitem];
 			myai[i].aishield.numberitems = alldefenseitemsenemies;
 
-			myai[i].aishieldsdamage.item = itemdamageenemies[myai[i].shieldsrandomitem];
+			myai[i].aishielddamage.item = itemdamageenemies[myai[i].shieldsrandomitem];
 
 			myai[i].aimagic.magiccount = 0;
 
@@ -1312,7 +1312,7 @@ beginning:
 
 			for(int j = 0; j < alldefenseitemsenemies; j++)
 			{
-				myai[i].aishieldsdamage.damage[j] = shielddamageenemies[j];
+				myai[i].aishielddamage.damage[j] = shielddamageenemies[j];
 			}
 
 			for(int j = 0; j < allarmorenemies; j++)
@@ -1669,38 +1669,38 @@ beginning:
 
 				for(int l = 0; l < alldefenseitems; l++)
 				{
-					loadstring(lineamount, &myplayer[i].shieldstype.item[l], fp1);
+					loadstring(lineamount, &myplayer[i].playershield.item[l], fp1);
 				}
 
-				loadnumber(lineamount, &myplayer[i].armor1.randomarmor, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.randomarmor[0], fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.nextrandomarmor, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.randomarmor[1], fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.nextrandomarmor2, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.randomarmor[2], fp1);
 				
-				loadstring(lineamount, &myplayer[i].armor1.equiped, fp1);
+				loadstring(lineamount, &myplayer[i].playerarmor.equiped, fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.rangey, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.rangey, fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.rangex, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.rangex, fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.protection, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.protection, fp1);
 				
 				for(int q = 0; q < allarmor; q++)
 				{
-					loadstring(lineamount, &myplayer[i].armor1.item[q], fp1);
+					loadstring(lineamount, &myplayer[i].playerarmor.item[q], fp1);
 				}
 				
 				for(int q = 0; q < allarmor; q++)
 				{
-					loadnumber(lineamount, &myplayer[i].armor1.protections[q], fp1);
+					loadnumber(lineamount, &myplayer[i].playerarmor.protections[q], fp1);
 				}
 				
-				loadnumber(lineamount, &myplayer[i].weapontype.weaponcount, fp1);
+				loadnumber(lineamount, &myplayer[i].playerweapons.weaponcount, fp1);
 				
-				loadnumber(lineamount, &myplayer[i].shieldstype.shieldcount, fp1);
+				loadnumber(lineamount, &myplayer[i].playershield.shieldcount, fp1);
 				
-				loadnumber(lineamount, &myplayer[i].armor1.armorcount, fp1);
+				loadnumber(lineamount, &myplayer[i].playerarmor.armorcount, fp1);
 
 				loadnumber(lineamount, &myplayer[i].thenumber, fp1);
 			}
@@ -1711,9 +1711,9 @@ beginning:
 
 				loadnumber(lineamount, &myai[i].shieldsrandomitem, fp1);
 
-				loadnumber(lineamount, &myai[i].character1.randomcharacter, fp1);
+				loadnumber(lineamount, &myai[i].aicharacter.randomcharacter, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.randommagic, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.randommagic[0], fp1);
 
 				loadnumber(lineamount, &myai[i].y, fp1);
 
@@ -1743,19 +1743,19 @@ beginning:
 
 				loadnumber(lineamount, &myai[i].playerturn, fp1);
 
-				loadstring(lineamount, &myai[i].weapontype.equiped, fp1);
+				loadstring(lineamount, &myai[i].aiweapons.equiped, fp1);
 
-				loadstring(lineamount, &myai[i].character1.character, fp1);
+				loadstring(lineamount, &myai[i].aicharacter.character, fp1);
 
-				loadstring(lineamount, &myai[i].character1.sign, fp1);
+				loadstring(lineamount, &myai[i].aicharacter.sign, fp1);
 
-				loadnumber(lineamount, &myai[i].character1.hitpoints, fp1);
+				loadnumber(lineamount, &myai[i].aicharacter.hitpoints, fp1);
 
-				loadnumber(lineamount, &myai[i].character1.defense, fp1);
+				loadnumber(lineamount, &myai[i].aicharacter.defense, fp1);
 
-				loadnumber(lineamount, &myai[i].character1.attack, fp1);
+				loadnumber(lineamount, &myai[i].aicharacter.attack, fp1);
 
-				loadstring(lineamount, &myai[i].weaponsdamage1.item, fp1);
+				loadstring(lineamount, &myai[i].aiweaponsdamage.item, fp1);
 
 				loadnumber(lineamount, &myai[i].defensepoints, fp1);
 
@@ -1763,132 +1763,132 @@ beginning:
 
 				for (int q = 0; q < allitemsenemies; q++)
 				{
-					loadstring(lineamount, &myai[i].weapontype.item[q], fp1);
+					loadstring(lineamount, &myai[i].aiweapons.item[q], fp1);
 				}
 
-				loadnumber(lineamount, &myai[i].weapontype.damage, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.damage, fp1);
 
-				loadnumber(lineamount, &myai[i].weapontype.rangey, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.rangey, fp1);
 
-				loadnumber(lineamount, &myai[i].weapontype.rangex, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.rangex, fp1);
 
-				loadnumber(lineamount, &myai[i].weapontype.numberitems, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.numberitems, fp1);
 
 				for (int q = 0; q < allitemsenemies; q++)
 				{
-					loadnumber(lineamount, &myai[i].weaponsdamage1.damage[q], fp1);
+					loadnumber(lineamount, &myai[i].aiweaponsdamage.damage[q], fp1);
 				}
 	
 				for (int q = 0; q < allitemsenemies; q++)
 				{
-					loadnumber(lineamount, &myai[i].weaponsdamage1.rangey[q], fp1);
+					loadnumber(lineamount, &myai[i].aiweaponsdamage.rangey[q], fp1);
 				}
 
 				for (int q = 0; q < allitemsenemies; q++)
 				{
-					loadnumber(lineamount, &myai[i].weaponsdamage1.rangex[q], fp1);
+					loadnumber(lineamount, &myai[i].aiweaponsdamage.rangex[q], fp1);
 				}
 
 				for(int q = 0; q < alldefenseitemsenemies; q++)
 				{
-					loadstring(lineamount, &myai[i].shieldstype.item[q], fp1);
+					loadstring(lineamount, &myai[i].aishield.item[q], fp1);
 				}
 
-				loadstring(lineamount, &myai[i].shieldstype.equiped, fp1);
+				loadstring(lineamount, &myai[i].aishield.equiped, fp1);
 
-				loadnumber(lineamount, &myai[i].shieldstype.damage, fp1);
+				loadnumber(lineamount, &myai[i].aishield.damage, fp1);
 
-				loadnumber(lineamount, &myai[i].shieldstype.numberitems, fp1);
+				loadnumber(lineamount, &myai[i].aishield.numberitems, fp1);
 
-				loadstring(lineamount, &myai[i].shieldsdamage1.item, fp1);
+				loadstring(lineamount, &myai[i].aishielddamage.item, fp1);
 
 				for(int q = 0; q < alldefenseitemsenemies; q++)
 				{
-					loadnumber(lineamount, &myai[i].shieldsdamage1.damage[q], fp1);
+					loadnumber(lineamount, &myai[i].aishielddamage.damage[q], fp1);
 				}
 
-				loadstring(lineamount, &myai[i].magic1.equiped, fp1);
+				loadstring(lineamount, &myai[i].aimagic.equiped, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.rangey, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.rangey, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.rangex, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.rangex, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.damage, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.damage, fp1);
 
 				loadnumber(lineamount, &myai[i].magicattack, fp1);
 
-				loadnumber(lineamount, &myai[i].character1.magicresist, fp1);
+				loadnumber(lineamount, &myai[i].aicharacter.magicresist, fp1);
 
 				loadnumber(lineamount, &myai[i].magicpoints, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.cost, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.cost, fp1);
 
-				loadnumber(lineamount, &myai[i].weapontype.numberitems, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.numberitems, fp1);
 
-				loadstring(lineamount, &myai[i].weapontype.equiped, fp1);
+				loadstring(lineamount, &myai[i].aiweapons.equiped, fp1);
 
-				loadnumber(lineamount, &myai[i].magic1.magiccount, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.magiccount, fp1);
 				
-				loadnumber(lineamount, &myai[i].magic1.nextrandommagic, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.randommagic[1], fp1);
 								
 				for(int l = 0; l < allmagicsenemies; l++)
 				{
-					loadstring(lineamount, &myai[i].magic1.magicitems[l], fp1);
+					loadstring(lineamount, &myai[i].aimagic.magicitems[l], fp1);
 				}
 				
-				loadnumber(lineamount, &myai[i].magic1.nextrandommagic2, fp1);
+				loadnumber(lineamount, &myai[i].aimagic.randommagic[2], fp1);
 				
-				loadnumber(lineamount, &myai[i].weapontype.randomweapon, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.randomweapon[0], fp1);
 				
-				loadnumber(lineamount, &myai[i].weapontype.nextrandomweapon, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.randomweapon[1], fp1);
 				
-				loadnumber(lineamount, &myai[i].weapontype.nextrandomweapon2, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.randomweapon[2], fp1);
 				
 				for (int l = 0; l < allitemsenemies; l++)
 				{
-					loadstring(lineamount, &myai[i].weapontype.item[l], fp1);
+					loadstring(lineamount, &myai[i].aiweapons.item[l], fp1);
 				}
 
-				loadnumber(lineamount, &myai[i].shieldstype.randomshield, fp1);
+				loadnumber(lineamount, &myai[i].aishield.randomshield[0], fp1);
 				
-				loadnumber(lineamount, &myai[i].shieldstype.nextrandomshield, fp1);
+				loadnumber(lineamount, &myai[i].aishield.randomshield[1], fp1);
 				
-				loadnumber(lineamount, &myai[i].shieldstype.nextrandomshield2, fp1);
+				loadnumber(lineamount, &myai[i].aishield.randomshield[2], fp1);
 				
 				for(int l = 0; l < alldefenseitemsenemies; l++)
 				{
-					loadstring(lineamount, &myai[i].shieldstype.item[l], fp1);
+					loadstring(lineamount, &myai[i].aishield.item[l], fp1);
 				}
 				
-				loadnumber(lineamount, &myai[i].armor1.randomarmor, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.randomarmor[0], fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.nextrandomarmor, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.randomarmor[1], fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.nextrandomarmor2, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.randomarmor[2], fp1);
 								
-				loadstring(lineamount, &myai[i].armor1.equiped, fp1);
+				loadstring(lineamount, &myai[i].aiarmor.equiped, fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.rangey, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.rangey, fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.rangex, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.rangex, fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.protection, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.protection, fp1);
 								
 				for(int q = 0; q < allarmorenemies; q++)
 				{
-					loadstring(lineamount, &myai[i].armor1.item[q], fp1);
+					loadstring(lineamount, &myai[i].aiarmor.item[q], fp1);
 				}
 								
 				for(int q = 0; q < allarmorenemies; q++)
 				{
-					loadnumber(lineamount, &myai[i].armor1.protections[q], fp1);
+					loadnumber(lineamount, &myai[i].aiarmor.protections[q], fp1);
 				}
 								
-				loadnumber(lineamount, &myai[i].weapontype.weaponcount, fp1);
+				loadnumber(lineamount, &myai[i].aiweapons.weaponcount, fp1);
 								
-				loadnumber(lineamount, &myai[i].shieldstype.shieldcount, fp1);
+				loadnumber(lineamount, &myai[i].aishield.shieldcount, fp1);
 								
-				loadnumber(lineamount, &myai[i].armor1.armorcount, fp1);
+				loadnumber(lineamount, &myai[i].aiarmor.armorcount, fp1);
 
 				loadnumber(lineamount, &myai[i].thenumber, fp1);
 			}
@@ -1962,7 +1962,7 @@ beginning:
 		{
 			if((hitpointspos1.y + i) > positiony)
 			{
-				videoprinterstats(hitpointspos1.y + i - positiony, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].character1.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].weapontype.damage + myplayer[i].character1.attack, myplayer[i].magic1.equiped, myplayer[i].magic1.damage, myplayer[i].defensepoints + myplayer[i].shieldstype.damage, myplayer[i].weapontype.equiped, myplayer[i].shieldstype.equiped, myplayer[i].armor1.equiped, myplayer[i].armor1.protection);
+				videoprinterstats(hitpointspos1.y + i - positiony, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].playercharacter.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].playerweapons.damage + myplayer[i].playercharacter.attack, myplayer[i].playermagic.equiped, myplayer[i].playermagic.damage, myplayer[i].defensepoints + myplayer[i].playershield.damage, myplayer[i].playerweapons.equiped, myplayer[i].playershield.equiped, myplayer[i].playerarmor.equiped, myplayer[i].playerarmor.protection);
 			}
 		}
 
@@ -1970,7 +1970,7 @@ beginning:
 		{
 			if((hitpointspos1.ay + i) >= (positiony) && (positiony > (maxenemies)))
 			{
-				videoprinterstats(hitpointspos1.ay + i - positiony, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[i].count, myai[i].character1.character, myai[i].hitpoints, myai[i].magicpoints, myai[i].weapontype.damage + myai[i].character1.attack, myai[i].magic1.equiped, myai[i].magic1.damage, myai[i].defensepoints + myai[i].shieldstype.damage, myai[i].weapontype.equiped, myai[i].shieldstype.equiped, myai[i].armor1.equiped, myai[i].armor1.protection);
+				videoprinterstats(hitpointspos1.ay + i - positiony, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[i].count, myai[i].aicharacter.character, myai[i].hitpoints, myai[i].magicpoints, myai[i].aiweapons.damage + myai[i].aicharacter.attack, myai[i].aimagic.equiped, myai[i].aimagic.damage, myai[i].defensepoints + myai[i].aishield.damage, myai[i].aiweapons.equiped, myai[i].aishield.equiped, myai[i].aiarmor.equiped, myai[i].aiarmor.protection);
 			}
 		}
 		
@@ -2012,9 +2012,9 @@ beginning:
 
 					writenumber(lineBuffer, lineamount, myplayer[i].shieldsrandomitem, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].character1.randomcharacter, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playercharacter.randomcharacter, fp1);
 					
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.randommagic, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.randommagic[0], fp1);
 				
 					writenumber(lineBuffer, lineamount, myplayer[i].y, fp1);
 					
@@ -2044,19 +2044,19 @@ beginning:
 
 					writenumber(lineBuffer, lineamount, myplayer[i].playerturn, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].weapontype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playerweapons.equiped, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].character1.character, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playercharacter.character, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].character1.sign, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playercharacter.sign, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].character1.hitpoints, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playercharacter.hitpoints, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].character1.defense, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playercharacter.defense, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].character1.attack, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playercharacter.attack, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].weaponsdamage1.item, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playerweaponsdamage.item, fp1);
 
 					writenumber(lineBuffer, lineamount, myplayer[i].defensepoints, fp1);
 
@@ -2064,133 +2064,133 @@ beginning:
 
 					for(int q = 0; q < allitems; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].weapontype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playerweapons.item[q], fp1);
 						
 					}
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.damage, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.damage, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.rangey, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.rangex, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.numberitems, fp1);
 
 					for(int q = 0; q < allitems; q++)
 					{
-						writenumber(lineBuffer, lineamount, myplayer[i].weaponsdamage1.damage[q], fp1);
+						writenumber(lineBuffer, lineamount, myplayer[i].playerweaponsdamage.damage[q], fp1);
 					}
 
 					for(int q = 0; q < allitems; q++)
 					{
-						writenumber(lineBuffer, lineamount, myplayer[i].weaponsdamage1.rangey[q], fp1);
+						writenumber(lineBuffer, lineamount, myplayer[i].playerweaponsdamage.rangey[q], fp1);
 					}
 
 					for(int q = 0; q < allitems; q++)
 					{
-						writenumber(lineBuffer, lineamount, myplayer[i].weaponsdamage1.rangex[q], fp1);
+						writenumber(lineBuffer, lineamount, myplayer[i].playerweaponsdamage.rangex[q], fp1);
 					}
 
 					for(int q = 0; q < alldefenseitems; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].shieldstype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playershield.item[q], fp1);
 					}
 
-					writestring(lineBuffer, lineamount, myplayer[i].shieldstype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playershield.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.damage, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.damage, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.numberitems, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].shieldsdamage1.item, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playershielddamage.item, fp1);
 
 					for(int q = 0; q < alldefenseitems; q++)
 					{
-						writenumber(lineBuffer, lineamount, myplayer[i].shieldsdamage1.damage[q], fp1);
+						writenumber(lineBuffer, lineamount, myplayer[i].playershielddamage.damage[q], fp1);
 					}
 
-					writestring(lineBuffer, lineamount, myplayer[i].magic1.equiped, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playermagic.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.rangey, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.rangex, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.damage, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.damage, fp1);
 
 					writenumber(lineBuffer, lineamount, myplayer[i].magicattack, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].character1.magicresist, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playercharacter.magicresist, fp1);
 
 					writenumber(lineBuffer, lineamount, myplayer[i].magicpoints, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.cost, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.cost, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.numberitems, fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].weapontype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playerweapons.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.magiccount, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.magiccount, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.nextrandommagic, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.randommagic[1], fp1);
 					
 					for(int q = 0; q < allmagics; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].magic1.magicitems[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playermagic.magicitems[q], fp1);
 					}
 
-					writenumber(lineBuffer, lineamount, myplayer[i].magic1.nextrandommagic2, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playermagic.randommagic[2], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.randomweapon, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.randomweapon[0], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.nextrandomweapon, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.randomweapon[1], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.nextrandomweapon2, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.randomweapon[2], fp1);
 
 					for(int q = 0; q < allitems; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].weapontype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playerweapons.item[q], fp1);
 					}
 					
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.randomshield, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.randomshield[0], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.nextrandomshield, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.randomshield[1], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.nextrandomshield2, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.randomshield[2], fp1);
 
 					for(int q = 0; q < alldefenseitems; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].shieldstype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playershield.item[q], fp1);
 					}
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.randomarmor, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.randomarmor[0], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.nextrandomarmor, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.randomarmor[1], fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.nextrandomarmor2, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.randomarmor[2], fp1);
 
-					writestring(lineBuffer, lineamount, myplayer[i].armor1.equiped, fp1);
+					writestring(lineBuffer, lineamount, myplayer[i].playerarmor.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.rangey, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.rangex, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.protection, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.protection, fp1);
 
 					for(int q = 0; q < allarmor; q++)
 					{
-						writestring(lineBuffer, lineamount, myplayer[i].armor1.item[q], fp1);
+						writestring(lineBuffer, lineamount, myplayer[i].playerarmor.item[q], fp1);
 					}
 
 					for(int q = 0; q < allarmor; q++)
 					{
-						writenumber(lineBuffer, lineamount, myplayer[i].armor1.protections[q], fp1);
+						writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.protections[q], fp1);
 					}
 
-					writenumber(lineBuffer, lineamount, myplayer[i].weapontype.weaponcount, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerweapons.weaponcount, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].shieldstype.shieldcount, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playershield.shieldcount, fp1);
 
-					writenumber(lineBuffer, lineamount, myplayer[i].armor1.armorcount, fp1);
+					writenumber(lineBuffer, lineamount, myplayer[i].playerarmor.armorcount, fp1);
 
 					writenumber(lineBuffer, lineamount, myplayer[i].thenumber, fp1);
 				}
@@ -2201,9 +2201,9 @@ beginning:
 					
 					writenumber(lineBuffer, lineamount, myai[i].shieldsrandomitem, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].character1.randomcharacter, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aicharacter.randomcharacter, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.randommagic, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.randommagic[0], fp1);
 				
 					writenumber(lineBuffer, lineamount, myai[i].y, fp1);
 
@@ -2233,19 +2233,19 @@ beginning:
 
 					writenumber(lineBuffer, lineamount, myai[i].playerturn, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].weapontype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aiweapons.equiped, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].character1.character, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aicharacter.character, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].character1.sign, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aicharacter.sign, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].character1.hitpoints, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aicharacter.hitpoints, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].character1.defense, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aicharacter.defense, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].character1.attack, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aicharacter.attack, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].weaponsdamage1.item, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aiweaponsdamage.item, fp1);
 
 					writenumber(lineBuffer, lineamount, myai[i].defensepoints, fp1);
 
@@ -2253,132 +2253,132 @@ beginning:
 
 					for (int q = 0; q < allitemsenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].weapontype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aiweapons.item[q], fp1);
 					}
 					
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.damage, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.damage, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.rangey, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.rangex, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.numberitems, fp1);
 
 					for (int q = 0; q < allitemsenemies; q++)
 					{
-						writenumber(lineBuffer, lineamount, myai[i].weaponsdamage1.damage[q], fp1);
+						writenumber(lineBuffer, lineamount, myai[i].aiweaponsdamage.damage[q], fp1);
 					}
 
 					for (int q = 0; q < allitemsenemies; q++)
 					{
-						writenumber(lineBuffer, lineamount, myai[i].weaponsdamage1.rangey[q], fp1);
+						writenumber(lineBuffer, lineamount, myai[i].aiweaponsdamage.rangey[q], fp1);
 					}
 
 					for (int q = 0; q < allitemsenemies; q++)
 					{
-						writenumber(lineBuffer, lineamount, myai[i].weaponsdamage1.rangex[q], fp1);
+						writenumber(lineBuffer, lineamount, myai[i].aiweaponsdamage.rangex[q], fp1);
 					}
 
 					for(int q = 0; q < alldefenseitemsenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].shieldstype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aishield.item[q], fp1);
 					}
 
-					writestring(lineBuffer, lineamount, myai[i].shieldstype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aishield.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.damage, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.damage, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.numberitems, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].shieldsdamage1.item, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aishielddamage.item, fp1);
 
 					for(int q = 0; q < alldefenseitemsenemies; q++)
 					{
-						writenumber(lineBuffer, lineamount, myai[i].shieldsdamage1.damage[q], fp1);
+						writenumber(lineBuffer, lineamount, myai[i].aishielddamage.damage[q], fp1);
 					}
 
-					writestring(lineBuffer, lineamount, myai[i].magic1.equiped, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aimagic.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.rangey, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.rangex, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.damage, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.damage, fp1);
 
 					writenumber(lineBuffer, lineamount, myai[i].magicattack, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].character1.magicresist, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aicharacter.magicresist, fp1);
 
 					writenumber(lineBuffer, lineamount, myai[i].magicpoints, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.cost, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.cost, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.numberitems, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.numberitems, fp1);
 
-					writestring(lineBuffer, lineamount, myai[i].weapontype.equiped, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aiweapons.equiped, fp1);
 
-					writenumber(lineBuffer, lineamount, myai[i].magic1.magiccount, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.magiccount, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].magic1.nextrandommagic, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.randommagic[1], fp1);
 										
 					for(int q = 0; q < allmagicsenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].magic1.magicitems[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aimagic.magicitems[q], fp1);
 					}
 					
-					writenumber(lineBuffer, lineamount, myai[i].magic1.nextrandommagic2, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aimagic.randommagic[2], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.randomweapon, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.randomweapon[0], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.nextrandomweapon, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.randomweapon[1], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.nextrandomweapon2, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.randomweapon[2], fp1);
 					
 					for (int q = 0; q < allitemsenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].weapontype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aiweapons.item[q], fp1);
 					}
 
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.randomshield, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.randomshield[0], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.nextrandomshield, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.randomshield[1], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.nextrandomshield2, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.randomshield[2], fp1);
 					
 					for(int q = 0; q < alldefenseitemsenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].shieldstype.item[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aishield.item[q], fp1);
 					}
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.randomarmor, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.randomarmor[0], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.nextrandomarmor, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.randomarmor[1], fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.nextrandomarmor2, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.randomarmor[2], fp1);
 					
-					writestring(lineBuffer, lineamount, myai[i].armor1.equiped, fp1);
+					writestring(lineBuffer, lineamount, myai[i].aiarmor.equiped, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.rangey, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.rangey, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.rangex, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.rangex, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.protection, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.protection, fp1);
 					
 					for(int q = 0; q < allarmorenemies; q++)
 					{
-						writestring(lineBuffer, lineamount, myai[i].armor1.item[q], fp1);
+						writestring(lineBuffer, lineamount, myai[i].aiarmor.item[q], fp1);
 					}
 					
 					for(int q = 0; q < allarmorenemies; q++)
 					{
-						writenumber(lineBuffer, lineamount, myai[i].armor1.protections[q], fp1);
+						writenumber(lineBuffer, lineamount, myai[i].aiarmor.protections[q], fp1);
 					}
 					
-					writenumber(lineBuffer, lineamount, myai[i].weapontype.weaponcount, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiweapons.weaponcount, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].shieldstype.shieldcount, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aishield.shieldcount, fp1);
 					
-					writenumber(lineBuffer, lineamount, myai[i].armor1.armorcount, fp1);
+					writenumber(lineBuffer, lineamount, myai[i].aiarmor.armorcount, fp1);
 
 					writenumber(lineBuffer, lineamount, myai[i].thenumber, fp1);
 				}
@@ -2844,42 +2844,42 @@ beginning:
 
 					if (list == 0)
 					{
-						videoprinterstats(l, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].character1.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].weapontype.damage + myplayer[i].character1.attack, myplayer[i].magic1.equiped, myplayer[i].magic1.damage, myplayer[i].defensepoints + myplayer[i].shieldstype.damage, myplayer[i].weapontype.equiped, myplayer[i].shieldstype.equiped, myplayer[i].armor1.equiped, myplayer[i].armor1.protection);
+						videoprinterstats(l, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].playercharacter.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].playerweapons.damage + myplayer[i].playercharacter.attack, myplayer[i].playermagic.equiped, myplayer[i].playermagic.damage, myplayer[i].defensepoints + myplayer[i].playershield.damage, myplayer[i].playerweapons.equiped, myplayer[i].playershield.equiped, myplayer[i].playerarmor.equiped, myplayer[i].playerarmor.protection);
 						l++;
 					}
 
 					if (list == 1)
 					{
-						while (strcmp(myplayer[i].magic1.magicitems[l - 1], "Empty") != 0)
+						while (strcmp(myplayer[i].playermagic.magicitems[l - 1], "Empty") != 0)
 						{
-							videoprinterarg2(l, 0, "Magic item %d is %s", l, myplayer[i].magic1.magicitems[l - 1]);
+							videoprinterarg2(l, 0, "Magic item %d is %s", l, myplayer[i].playermagic.magicitems[l - 1]);
 							l++;
 						}
 					}
 
 					if (list == 2)
 					{
-						while (strcmp(myplayer[i].weapontype.item[l - 1], "Empty") != 0)
+						while (strcmp(myplayer[i].playerweapons.item[l - 1], "Empty") != 0)
 						{
-							videoprinterarg2(l, 0, "Weapon item %d is %s", l, myplayer[i].weapontype.item[l - 1]);
+							videoprinterarg2(l, 0, "Weapon item %d is %s", l, myplayer[i].playerweapons.item[l - 1]);
 							l++;
 						}
 					}
 
 					if (list == 3)
 					{
-						while (strcmp(myplayer[i].shieldstype.item[l - 1], "Empty") != 0)
+						while (strcmp(myplayer[i].playershield.item[l - 1], "Empty") != 0)
 						{
-							videoprinterarg2(l, 0, "Shield item %d is %s", l, myplayer[i].shieldstype.item[l - 1]);
+							videoprinterarg2(l, 0, "Shield item %d is %s", l, myplayer[i].playershield.item[l - 1]);
 							l++;
 						}
 					}
 
 					if (list == 4)
 					{
-						while (strcmp(myplayer[i].armor1.item[l - 1], "Empty") != 0)
+						while (strcmp(myplayer[i].playerarmor.item[l - 1], "Empty") != 0)
 						{
-							videoprinterarg2(l, 0, "Armor item %d is %s", l, myplayer[i].armor1.item[l - 1]);
+							videoprinterarg2(l, 0, "Armor item %d is %s", l, myplayer[i].playerarmor.item[l - 1]);
 							l++;
 						}
 					}
@@ -2959,42 +2959,42 @@ beginning:
 
 					if(list == 0)
 					{
-						videoprinterstats(l+1, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[theenemy].count, myai[theenemy].character1.character, myai[theenemy].hitpoints, myai[theenemy].magicpoints, myai[theenemy].weapontype.damage + myai[theenemy].character1.attack, myai[theenemy].magic1.equiped, myai[theenemy].magic1.damage, myai[theenemy].defensepoints + myai[theenemy].shieldstype.damage, myai[theenemy].weapontype.equiped, myai[theenemy].shieldstype.equiped, myai[theenemy].armor1.equiped, myai[theenemy].armor1.protection);
+						videoprinterstats(l+1, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[theenemy].count, myai[theenemy].aicharacter.character, myai[theenemy].hitpoints, myai[theenemy].magicpoints, myai[theenemy].aiweapons.damage + myai[theenemy].aicharacter.attack, myai[theenemy].aimagic.equiped, myai[theenemy].aimagic.damage, myai[theenemy].defensepoints + myai[theenemy].aishield.damage, myai[theenemy].aiweapons.equiped, myai[theenemy].aishield.equiped, myai[theenemy].aiarmor.equiped, myai[theenemy].aiarmor.protection);
 						l++;
 					}
 
 					if(list == 1)
 					{
-						while(strcmp(myai[theenemy].magic1.magicitems[l], "Empty") != 0)
+						while(strcmp(myai[theenemy].aimagic.magicitems[l], "Empty") != 0)
 						{
-							videoprinterarg2(l+1, 0, "Magic item %d is %s", l + 1, myai[theenemy].magic1.magicitems[l]);
+							videoprinterarg2(l+1, 0, "Magic item %d is %s", l + 1, myai[theenemy].aimagic.magicitems[l]);
 							l++;
 						}
 					}
 					
 					if(list == 2)
 					{
-						while(strcmp(myai[theenemy].weapontype.item[l], "Empty") != 0)
+						while(strcmp(myai[theenemy].aiweapons.item[l], "Empty") != 0)
 						{
-							videoprinterarg2(l+1, 0, "Weapon item %d is %s", l + 1, myai[theenemy].weapontype.item[l]);
+							videoprinterarg2(l+1, 0, "Weapon item %d is %s", l + 1, myai[theenemy].aiweapons.item[l]);
 							l++;
 						}
 					}
 					
 					if(list == 3)
 					{
-						while(strcmp(myai[theenemy].shieldstype.item[l], "Empty") != 0)
+						while(strcmp(myai[theenemy].aishield.item[l], "Empty") != 0)
 						{
-							videoprinterarg2(l+1, 0, "Shield item %d is %s", l + 1, myai[theenemy].shieldstype.item[l]);
+							videoprinterarg2(l+1, 0, "Shield item %d is %s", l + 1, myai[theenemy].aishield.item[l]);
 							l++;
 						}
 					}
 					
 					if(list == 4)
 					{
-						while(strcmp(myai[theenemy].armor1.item[l], "Empty") != 0)
+						while(strcmp(myai[theenemy].aiarmor.item[l], "Empty") != 0)
 						{
-							videoprinterarg2(l+1, 0, "Armor item %d is %s", l + 1, myai[theenemy].armor1.item[l]);
+							videoprinterarg2(l+1, 0, "Armor item %d is %s", l + 1, myai[theenemy].aiarmor.item[l]);
 							l++;
 						}
 					}
@@ -3056,9 +3056,9 @@ beginning:
 				videoprinterarg1(l, 0, "Player %d", i + 1);
 				l++;
 
-				while (strcmp(myplayer[i].magic1.magicitems[l - 1], "Empty") != 0)
+				while (strcmp(myplayer[i].playermagic.magicitems[l - 1], "Empty") != 0)
 				{
-					videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myplayer[i].magic1.magicitems[l - 1]);
+					videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myplayer[i].playermagic.magicitems[l - 1]);
 					l++;
 				}
 
@@ -3098,24 +3098,24 @@ beginning:
 							u = 3;
 						}
 
-						if (u >(myplayer[i].magic1.magiccount) && list == 0)
+						if (u >(myplayer[i].playermagic.magiccount) && list == 0)
 						{
-							u = myplayer[i].magic1.magiccount;
+							u = myplayer[i].playermagic.magiccount;
 						}
 
-						if (u > (myplayer[i].weapontype.weaponcount) && list == 1)
+						if (u > (myplayer[i].playerweapons.weaponcount) && list == 1)
 						{
-							u = myplayer[i].weapontype.weaponcount;
+							u = myplayer[i].playerweapons.weaponcount;
 						}
 
-						if (u > (myplayer[i].shieldstype.shieldcount) && list == 2)
+						if (u > (myplayer[i].playershield.shieldcount) && list == 2)
 						{
-							u = myplayer[i].shieldstype.shieldcount;
+							u = myplayer[i].playershield.shieldcount;
 						}
 
-						if (u > (myplayer[i].armor1.armorcount) && list == 3)
+						if (u > (myplayer[i].playerarmor.armorcount) && list == 3)
 						{
-							u = myplayer[i].armor1.armorcount;
+							u = myplayer[i].playerarmor.armorcount;
 						}
 					}
 
@@ -3139,9 +3139,9 @@ beginning:
 							videoprinterarg1(l, 0, "Player %d", i + 1);
 							l++;
 
-							while (strcmp(myplayer[i].magic1.magicitems[l - 1], "Empty") != 0)
+							while (strcmp(myplayer[i].playermagic.magicitems[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myplayer[i].magic1.magicitems[l - 1]);
+								videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myplayer[i].playermagic.magicitems[l - 1]);
 								l++;
 							}
 						}
@@ -3153,9 +3153,9 @@ beginning:
 							videoprinterarg1(l, 0, "Player %d", i + 1);
 							l++;
 
-							while (strcmp(myplayer[i].weapontype.item[l - 1], "Empty") != 0)
+							while (strcmp(myplayer[i].playerweapons.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Weapon item %d is %s.\n", l, myplayer[i].weapontype.item[l - 1]);
+								videoprinterarg2(l, 0, "Weapon item %d is %s.\n", l, myplayer[i].playerweapons.item[l - 1]);
 								l++;
 							}
 						}
@@ -3167,9 +3167,9 @@ beginning:
 							videoprinterarg1(l, 0, "Player %d", i + 1);
 							l++;
 
-							while (strcmp(myplayer[i].shieldstype.item[l - 1], "Empty") != 0)
+							while (strcmp(myplayer[i].playershield.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Shield item %d is %s.\n", l, myplayer[i].shieldstype.item[l - 1]);
+								videoprinterarg2(l, 0, "Shield item %d is %s.\n", l, myplayer[i].playershield.item[l - 1]);
 								l++;
 							}
 						}
@@ -3181,9 +3181,9 @@ beginning:
 							videoprinterarg1(l, 0, "Player %d", i + 1);
 							l++;
 
-							while (strcmp(myplayer[i].armor1.item[l - 1], "Empty") != 0)
+							while (strcmp(myplayer[i].playerarmor.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Armor item %d is %s.\n", l, myplayer[i].armor1.item[l - 1]);
+								videoprinterarg2(l, 0, "Armor item %d is %s.\n", l, myplayer[i].playerarmor.item[l - 1]);
 								l++;
 							}
 						}
@@ -3205,59 +3205,60 @@ beginning:
 
 				if (list == 0)
 				{
-					myplayer[i].magic1.equiped = myplayer[i].magic1.magicitems[u-1];
+					myplayer[i].playermagic.equiped = myplayer[i].playermagic.magicitems[u-1];
 
 					if (u == 1)
 					{
-						myplayer[i].magic1.rangey = playermagicdistance[myplayer[i].magic1.randommagic];
-						myplayer[i].magic1.rangex = playermagicdistance[myplayer[i].magic1.randommagic];
-						myplayer[i].magic1.damage = playermagicdamage[myplayer[i].magic1.randommagic];
-						myplayer[i].magic1.cost = playermagiccost[myplayer[i].magic1.randommagic];
+						myplayer[i].playermagic.rangey = playermagicdistance[myplayer[i].playermagic.randommagic[0]];
+						myplayer[i].playermagic.rangex = playermagicdistance[myplayer[i].playermagic.randommagic[0]];
+						myplayer[i].playermagic.damage = playermagicdamage[myplayer[i].playermagic.randommagic[0]];
+						myplayer[i].playermagic.cost = playermagiccost[myplayer[i].playermagic.randommagic[0]];
 					}
 
 					if (u == 2)
 					{
-						myplayer[i].magic1.rangey = playermagicdistance[myplayer[i].magic1.nextrandommagic];
-						myplayer[i].magic1.rangex = playermagicdistance[myplayer[i].magic1.nextrandommagic];
-						myplayer[i].magic1.damage = playermagicdamage[myplayer[i].magic1.nextrandommagic];
-						myplayer[i].magic1.cost = playermagiccost[myplayer[i].magic1.nextrandommagic];
+						myplayer[i].playermagic.rangey = playermagicdistance[myplayer[i].playermagic.randommagic[1]];
+						myplayer[i].playermagic.rangex = playermagicdistance[myplayer[i].playermagic.randommagic[1]];
+						myplayer[i].playermagic.damage = playermagicdamage[myplayer[i].playermagic.randommagic[1]];
+						myplayer[i].playermagic.cost = playermagiccost[myplayer[i].playermagic.randommagic[1]];
 					}
 
 					if (u == 3)
 					{
-						myplayer[i].magic1.rangey = playermagicdistance[myplayer[i].magic1.nextrandommagic2];
-						myplayer[i].magic1.rangex = playermagicdistance[myplayer[i].magic1.nextrandommagic2];
-						myplayer[i].magic1.damage = playermagicdamage[myplayer[i].magic1.nextrandommagic2];
-						myplayer[i].magic1.cost = playermagiccost[myplayer[i].magic1.nextrandommagic2];
+						myplayer[i].playermagic.rangey = playermagicdistance[myplayer[i].playermagic.randommagic[2]];
+						myplayer[i].playermagic.rangex = playermagicdistance[myplayer[i].playermagic.randommagic[2]];
+						myplayer[i].playermagic.damage = playermagicdamage[myplayer[i].playermagic.randommagic[2]];
+						myplayer[i].playermagic.cost = playermagiccost[myplayer[i].playermagic.randommagic[2]];
+
 					}
 
-					myplayer[i].magicattack = myplayer[i].magic1.damage;
+					myplayer[i].magicattack = myplayer[i].playermagic.damage;
 				}
 
 				if (list == 1)
 				{
 					if (u == 1)
 					{
-						myplayer[i].weapontype.equiped = item[myplayer[i].weapontype.randomweapon];
-						myplayer[i].weapontype.rangey = rangey[myplayer[i].weapontype.randomweapon];
-						myplayer[i].weapontype.rangex = rangex[myplayer[i].weapontype.randomweapon];
-						myplayer[i].weapontype.damage = damage[myplayer[i].weapontype.randomweapon];
+						myplayer[i].playerweapons.equiped = item[myplayer[i].playerweapons.randomweapon[0]];
+						myplayer[i].playerweapons.rangey = rangey[myplayer[i].playerweapons.randomweapon[0]];
+						myplayer[i].playerweapons.rangex = rangex[myplayer[i].playerweapons.randomweapon[0]];
+						myplayer[i].playerweapons.damage = damage[myplayer[i].playerweapons.randomweapon[0]];
 					}
 
 					if (u == 2)
 					{
-						myplayer[i].weapontype.equiped = item[myplayer[i].weapontype.nextrandomweapon];
-						myplayer[i].weapontype.rangey = rangey[myplayer[i].weapontype.nextrandomweapon];
-						myplayer[i].weapontype.rangex = rangex[myplayer[i].weapontype.nextrandomweapon];
-						myplayer[i].weapontype.damage = damage[myplayer[i].weapontype.nextrandomweapon];
+						myplayer[i].playerweapons.equiped = item[myplayer[i].playerweapons.randomweapon[1]];
+						myplayer[i].playerweapons.rangey = rangey[myplayer[i].playerweapons.randomweapon[1]];
+						myplayer[i].playerweapons.rangex = rangex[myplayer[i].playerweapons.randomweapon[1]];
+						myplayer[i].playerweapons.damage = damage[myplayer[i].playerweapons.randomweapon[1]];
 					}
 
 					if (u == 3)
 					{
-						myplayer[i].weapontype.equiped = item[myplayer[i].weapontype.nextrandomweapon2];
-						myplayer[i].weapontype.rangey = rangey[myplayer[i].weapontype.nextrandomweapon2];
-						myplayer[i].weapontype.rangex = rangex[myplayer[i].weapontype.nextrandomweapon2];
-						myplayer[i].weapontype.damage = damage[myplayer[i].weapontype.nextrandomweapon2];
+						myplayer[i].playerweapons.equiped = item[myplayer[i].playerweapons.randomweapon[2]];
+						myplayer[i].playerweapons.rangey = rangey[myplayer[i].playerweapons.randomweapon[2]];
+						myplayer[i].playerweapons.rangex = rangex[myplayer[i].playerweapons.randomweapon[2]];
+						myplayer[i].playerweapons.damage = damage[myplayer[i].playerweapons.randomweapon[2]];
 					}
 				}
 
@@ -3265,52 +3266,52 @@ beginning:
 				{
 					if (u == 1)
 					{
-						myplayer[i].shieldstype.equiped = itemdamage[myplayer[i].shieldstype.randomshield];
-						myplayer[i].shieldstype.damage = shielddamage[myplayer[i].shieldstype.randomshield];
-						myplayer[i].shieldsdamage1.item = itemdamage[myplayer[i].shieldstype.randomshield];
+						myplayer[i].playershield.equiped = itemdamage[myplayer[i].playershield.randomshield[0]];
+						myplayer[i].playershield.damage = shielddamage[myplayer[i].playershield.randomshield[0]];
+						myplayer[i].playershielddamage.item = itemdamage[myplayer[i].playershield.randomshield[0]];
 					}
 
 					if (u == 2)
 					{
-						myplayer[i].shieldstype.equiped = itemdamage[myplayer[i].shieldstype.nextrandomshield];
-						myplayer[i].shieldstype.damage = shielddamage[myplayer[i].shieldstype.nextrandomshield];
-						myplayer[i].shieldsdamage1.item = itemdamage[myplayer[i].shieldstype.nextrandomshield];
+						myplayer[i].playershield.equiped = itemdamage[myplayer[i].playershield.randomshield[1]];
+						myplayer[i].playershield.damage = shielddamage[myplayer[i].playershield.randomshield[1]];
+						myplayer[i].playershielddamage.item = itemdamage[myplayer[i].playershield.randomshield[1]];
 					}
 
 					if (u == 3)
 					{
-						myplayer[i].shieldstype.equiped = itemdamage[myplayer[i].shieldstype.nextrandomshield2];
-						myplayer[i].shieldstype.damage = shielddamage[myplayer[i].shieldstype.nextrandomshield2];
-						myplayer[i].shieldsdamage1.item = itemdamage[myplayer[i].shieldstype.nextrandomshield2];
+						myplayer[i].playershield.equiped = itemdamage[myplayer[i].playershield.randomshield[2]];
+						myplayer[i].playershield.damage = shielddamage[myplayer[i].playershield.randomshield[2]];
+						myplayer[i].playershielddamage.item = itemdamage[myplayer[i].playershield.randomshield[2]];
 					}
 
-					myplayer[i].shield = myplayer[i].shieldstype.equiped;
+					myplayer[i].shield = myplayer[i].playershield.equiped;
 				}
 
 				if (list == 3)
 				{
 					if (u == 1)
 					{
-						myplayer[i].armor1.equiped = playerarmor[myplayer[i].armor1.randomarmor];
-						myplayer[i].armor1.protection = playerarmorpts[myplayer[i].armor1.randomarmor];
-						myplayer[i].armor1.rangey = playerarmordistancey[myplayer[i].armor1.randomarmor];
-						myplayer[i].armor1.rangex = playerarmordistancex[myplayer[i].armor1.randomarmor];
+						myplayer[i].playerarmor.equiped = playerarmor[myplayer[i].playerarmor.randomarmor[0]];
+						myplayer[i].playerarmor.protection = playerarmorpts[myplayer[i].playerarmor.randomarmor[0]];
+						myplayer[i].playerarmor.rangey = playerarmordistancey[myplayer[i].playerarmor.randomarmor[0]];
+						myplayer[i].playerarmor.rangex = playerarmordistancex[myplayer[i].playerarmor.randomarmor[0]];
 					}
 
 					if (u == 2)
 					{
-						myplayer[i].armor1.equiped = playerarmor[myplayer[i].armor1.nextrandomarmor];
-						myplayer[i].armor1.protection = playerarmorpts[myplayer[i].armor1.nextrandomarmor];
-						myplayer[i].armor1.rangey = playerarmordistancey[myplayer[i].armor1.nextrandomarmor];
-						myplayer[i].armor1.rangex = playerarmordistancex[myplayer[i].armor1.nextrandomarmor];
+						myplayer[i].playerarmor.equiped = playerarmor[myplayer[i].playerarmor.randomarmor[1]];
+						myplayer[i].playerarmor.protection = playerarmorpts[myplayer[i].playerarmor.randomarmor[1]];
+						myplayer[i].playerarmor.rangey = playerarmordistancey[myplayer[i].playerarmor.randomarmor[1]];
+						myplayer[i].playerarmor.rangex = playerarmordistancex[myplayer[i].playerarmor.randomarmor[1]];
 					}
 
 					if (u == 3)
 					{
-						myplayer[i].armor1.equiped = playerarmor[myplayer[i].armor1.nextrandomarmor2];
-						myplayer[i].armor1.protection = playerarmorpts[myplayer[i].armor1.nextrandomarmor2];
-						myplayer[i].armor1.rangey = playerarmordistancey[myplayer[i].armor1.nextrandomarmor2];
-						myplayer[i].armor1.rangex = playerarmordistancex[myplayer[i].armor1.nextrandomarmor2];
+						myplayer[i].playerarmor.equiped = playerarmor[myplayer[i].playerarmor.randomarmor[2]];
+						myplayer[i].playerarmor.protection = playerarmorpts[myplayer[i].playerarmor.randomarmor[2]];
+						myplayer[i].playerarmor.rangey = playerarmordistancey[myplayer[i].playerarmor.randomarmor[2]];
+						myplayer[i].playerarmor.rangex = playerarmordistancex[myplayer[i].playerarmor.randomarmor[2]];
 					}
 				}
 
@@ -3344,9 +3345,9 @@ beginning:
 				videoprinterarg1(l, 0, "AI %d", i + 1);
 				l++;
 
-				while (strcmp(myai[iai].magic1.magicitems[l - 1], "Empty") != 0)
+				while (strcmp(myai[iai].aimagic.magicitems[l - 1], "Empty") != 0)
 				{
-					videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myai[iai].magic1.magicitems[l - 1]);
+					videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myai[iai].aimagic.magicitems[l - 1]);
 					l++;
 				}
 
@@ -3386,24 +3387,24 @@ beginning:
 							u = 3;
 						}
 
-						if (u > (myai[iai].magic1.magiccount) && list == 0)
+						if (u > (myai[iai].aimagic.magiccount) && list == 0)
 						{
-							u = myai[iai].magic1.magiccount;
+							u = myai[iai].aimagic.magiccount;
 						}
 
-						if (u > (myai[iai].weapontype.weaponcount) && list == 1)
+						if (u > (myai[iai].aiweapons.weaponcount) && list == 1)
 						{
-							u = myai[iai].weapontype.weaponcount;
+							u = myai[iai].aiweapons.weaponcount;
 						}
 
-						if (u > (myai[iai].shieldstype.shieldcount) && list == 2)
+						if (u > (myai[iai].aishield.shieldcount) && list == 2)
 						{
-							u = myai[iai].shieldstype.shieldcount;
+							u = myai[iai].aishield.shieldcount;
 						}
 
-						if (u > (myai[iai].armor1.armorcount) && list == 3)
+						if (u > (myai[iai].aiarmor.armorcount) && list == 3)
 						{
-							u = myai[iai].armor1.armorcount;
+							u = myai[iai].aiarmor.armorcount;
 						}
 					}
 
@@ -3427,9 +3428,9 @@ beginning:
 							videoprinterarg1(l, 0, "AI %d", i + 1);
 							l++;
 
-							while (strcmp(myai[iai].magic1.magicitems[l - 1], "Empty") != 0)
+							while (strcmp(myai[iai].aimagic.magicitems[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myai[iai].magic1.magicitems[l - 1]);
+								videoprinterarg2(l, 0, "Magic item %d is %s.\n", l, myai[iai].aimagic.magicitems[l - 1]);
 								l++;
 							}
 						}
@@ -3441,9 +3442,9 @@ beginning:
 							videoprinterarg1(l, 0, "AI %d", i + 1);
 							l++;
 
-							while (strcmp(myai[iai].weapontype.item[l - 1], "Empty") != 0)
+							while (strcmp(myai[iai].aiweapons.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Weapon item %d is %s.\n", l, myai[iai].weapontype.item[l - 1]);
+								videoprinterarg2(l, 0, "Weapon item %d is %s.\n", l, myai[iai].aiweapons.item[l - 1]);
 								l++;
 							}
 						}
@@ -3455,9 +3456,9 @@ beginning:
 							videoprinterarg1(l, 0, "AI %d", i + 1);
 							l++;
 
-							while (strcmp(myai[iai].shieldstype.item[l - 1], "Empty") != 0)
+							while (strcmp(myai[iai].aishield.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Shield item %d is %s.\n", l, myai[iai].shieldstype.item[l - 1]);
+								videoprinterarg2(l, 0, "Shield item %d is %s.\n", l, myai[iai].aishield.item[l - 1]);
 								l++;
 							}
 						}
@@ -3469,9 +3470,9 @@ beginning:
 							videoprinterarg1(l, 0, "AI %d", i + 1);
 							l++;
 
-							while (strcmp(myai[iai].armor1.item[l - 1], "Empty") != 0)
+							while (strcmp(myai[iai].aiarmor.item[l - 1], "Empty") != 0)
 							{
-								videoprinterarg2(l, 0, "Armor item %d is %s.\n", l, myai[iai].armor1.item[l - 1]);
+								videoprinterarg2(l, 0, "Armor item %d is %s.\n", l, myai[iai].aiarmor.item[l - 1]);
 								l++;
 							}
 						}
@@ -3493,59 +3494,59 @@ beginning:
 
 				if (list == 0)
 				{
-					myai[iai].magic1.equiped = myai[iai].magic1.magicitems[u - 1];
+					myai[iai].aimagic.equiped = myai[iai].aimagic.magicitems[u - 1];
 
 					if (u == 1)
 					{
-						myai[iai].magic1.rangey = aimagicdistance[myai[iai].magic1.randommagic];
-						myai[iai].magic1.rangex = aimagicdistance[myai[iai].magic1.randommagic];
-						myai[iai].magic1.damage = aimagicdamage[myai[iai].magic1.randommagic];
-						myai[iai].magic1.cost = aimagiccost[myai[iai].magic1.randommagic];
+						myai[iai].aimagic.rangey = aimagicdistance[myai[iai].aimagic.randommagic[0]];
+						myai[iai].aimagic.rangex = aimagicdistance[myai[iai].aimagic.randommagic[0]];
+						myai[iai].aimagic.damage = aimagicdamage[myai[iai].aimagic.randommagic[0]];
+						myai[iai].aimagic.cost = aimagiccost[myai[iai].aimagic.randommagic[0]];
 					}
 
 					if (u == 2)
 					{
-						myai[iai].magic1.rangey = aimagicdistance[myai[iai].magic1.nextrandommagic];
-						myai[iai].magic1.rangex = aimagicdistance[myai[iai].magic1.nextrandommagic];
-						myai[iai].magic1.damage = aimagicdamage[myai[iai].magic1.nextrandommagic];
-						myai[iai].magic1.cost = aimagiccost[myai[iai].magic1.nextrandommagic];
+						myai[iai].aimagic.rangey = aimagicdistance[myai[iai].aimagic.randommagic[1]];
+						myai[iai].aimagic.rangex = aimagicdistance[myai[iai].aimagic.randommagic[1]];
+						myai[iai].aimagic.damage = aimagicdamage[myai[iai].aimagic.randommagic[1]];
+						myai[iai].aimagic.cost = aimagiccost[myai[iai].aimagic.randommagic[1]];
 					}
 
 					if (u == 3)
 					{
-						myai[iai].magic1.rangey = aimagicdistance[myai[iai].magic1.nextrandommagic2];
-						myai[iai].magic1.rangex = aimagicdistance[myai[iai].magic1.nextrandommagic2];
-						myai[iai].magic1.damage = aimagicdamage[myai[iai].magic1.nextrandommagic2];
-						myai[iai].magic1.cost = aimagiccost[myai[iai].magic1.nextrandommagic2];
+						myai[iai].aimagic.rangey = aimagicdistance[myai[iai].aimagic.randommagic[2]];
+						myai[iai].aimagic.rangex = aimagicdistance[myai[iai].aimagic.randommagic[2]];
+						myai[iai].aimagic.damage = aimagicdamage[myai[iai].aimagic.randommagic[2]];
+						myai[iai].aimagic.cost = aimagiccost[myai[iai].aimagic.randommagic[2]];
 					}
 
-					myai[iai].magicattack = myai[iai].magic1.damage;
+					myai[iai].magicattack = myai[iai].aimagic.damage;
 				}
 
 				if (list == 1)
 				{
 					if (u == 1)
 					{
-						myai[iai].weapontype.equiped = itemenemies[myai[iai].weapontype.randomweapon];
-						myai[iai].weapontype.rangey = rangeyenemies[myai[iai].weapontype.randomweapon];
-						myai[iai].weapontype.rangex = rangexenemies[myai[iai].weapontype.randomweapon];
-						myai[iai].weapontype.damage = damageenemies[myai[iai].weapontype.randomweapon];
+						myai[iai].aiweapons.equiped = itemenemies[myai[iai].aiweapons.randomweapon[0]];
+						myai[iai].aiweapons.rangey = rangeyenemies[myai[iai].aiweapons.randomweapon[0]];
+						myai[iai].aiweapons.rangex = rangexenemies[myai[iai].aiweapons.randomweapon[0]];
+						myai[iai].aiweapons.damage = damageenemies[myai[iai].aiweapons.randomweapon[0]];
 					}
 
 					if (u == 2)
 					{
-						myai[iai].weapontype.equiped = itemenemies[myai[iai].weapontype.nextrandomweapon];
-						myai[iai].weapontype.rangey = rangeyenemies[myai[iai].weapontype.nextrandomweapon];
-						myai[iai].weapontype.rangex = rangexenemies[myai[iai].weapontype.nextrandomweapon];
-						myai[iai].weapontype.damage = damageenemies[myai[iai].weapontype.nextrandomweapon];
+						myai[iai].aiweapons.equiped = itemenemies[myai[iai].aiweapons.randomweapon[1]];
+						myai[iai].aiweapons.rangey = rangeyenemies[myai[iai].aiweapons.randomweapon[1]];
+						myai[iai].aiweapons.rangex = rangexenemies[myai[iai].aiweapons.randomweapon[1]];
+						myai[iai].aiweapons.damage = damageenemies[myai[iai].aiweapons.randomweapon[1]];
 					}
 
 					if (u == 3)
 					{
-						myai[iai].weapontype.equiped = itemenemies[myai[iai].weapontype.nextrandomweapon2];
-						myai[iai].weapontype.rangey = rangeyenemies[myai[iai].weapontype.nextrandomweapon2];
-						myai[iai].weapontype.rangex = rangexenemies[myai[iai].weapontype.nextrandomweapon2];
-						myai[iai].weapontype.damage = damageenemies[myai[iai].weapontype.nextrandomweapon2];
+						myai[iai].aiweapons.equiped = itemenemies[myai[iai].aiweapons.randomweapon[2]];
+						myai[iai].aiweapons.rangey = rangeyenemies[myai[iai].aiweapons.randomweapon[2]];
+						myai[iai].aiweapons.rangex = rangexenemies[myai[iai].aiweapons.randomweapon[2]];
+						myai[iai].aiweapons.damage = damageenemies[myai[iai].aiweapons.randomweapon[2]];
 					}
 				}
 
@@ -3553,52 +3554,52 @@ beginning:
 				{
 					if (u == 1)
 					{
-						myai[iai].shieldstype.equiped = itemdamageenemies[myai[iai].shieldstype.randomshield];
-						myai[iai].shieldstype.damage = shielddamageenemies[myai[iai].shieldstype.randomshield];
-						myai[iai].shieldsdamage1.item = itemdamageenemies[myai[iai].shieldstype.randomshield];
+						myai[iai].aishield.equiped = itemdamageenemies[myai[iai].aishield.randomshield[0]];
+						myai[iai].aishield.damage = shielddamageenemies[myai[iai].aishield.randomshield[0]];
+						myai[iai].aishielddamage.item = itemdamageenemies[myai[iai].aishield.randomshield[0]];
 					}
 
 					if (u == 2)
 					{
-						myai[iai].shieldstype.equiped = itemdamageenemies[myai[iai].shieldstype.nextrandomshield];
-						myai[iai].shieldstype.damage = shielddamageenemies[myai[iai].shieldstype.nextrandomshield];
-						myai[iai].shieldsdamage1.item = itemdamageenemies[myai[iai].shieldstype.nextrandomshield];
+						myai[iai].aishield.equiped = itemdamageenemies[myai[iai].aishield.randomshield[1]];
+						myai[iai].aishield.damage = shielddamageenemies[myai[iai].aishield.randomshield[1]];
+						myai[iai].aishielddamage.item = itemdamageenemies[myai[iai].aishield.randomshield[1]];
 					}
 
 					if (u == 3)
 					{
-						myai[iai].shieldstype.equiped = itemdamageenemies[myai[iai].shieldstype.nextrandomshield2];
-						myai[iai].shieldstype.damage = shielddamageenemies[myai[iai].shieldstype.nextrandomshield2];
-						myai[iai].shieldsdamage1.item = itemdamageenemies[myai[iai].shieldstype.nextrandomshield2];
+						myai[iai].aishield.equiped = itemdamageenemies[myai[iai].aishield.randomshield[2]];
+						myai[iai].aishield.damage = shielddamageenemies[myai[iai].aishield.randomshield[2]];
+						myai[iai].aishielddamage.item = itemdamageenemies[myai[iai].aishield.randomshield[2]];
 					}
 
-					myai[iai].shield = myai[iai].shieldstype.equiped;
+					myai[iai].shield = myai[iai].aishield.equiped;
 				}
 
 				if (list == 3)
 				{
 					if (u == 1)
 					{
-						myai[iai].armor1.equiped = aiarmor[myai[iai].armor1.randomarmor];
-						myai[iai].armor1.protection = aiarmorpts[myai[iai].armor1.randomarmor];
-						myai[iai].armor1.rangey = aiarmordistancey[myai[iai].armor1.randomarmor];
-						myai[iai].armor1.rangex = aiarmordistancex[myai[iai].armor1.randomarmor];
+						myai[iai].aiarmor.equiped = aiarmor[myai[iai].aiarmor.randomarmor[0]];
+						myai[iai].aiarmor.protection = aiarmorpts[myai[iai].aiarmor.randomarmor[0]];
+						myai[iai].aiarmor.rangey = aiarmordistancey[myai[iai].aiarmor.randomarmor[0]];
+						myai[iai].aiarmor.rangex = aiarmordistancex[myai[iai].aiarmor.randomarmor[0]];
 					}
 
 					if (u == 2)
 					{
-						myai[iai].armor1.equiped = aiarmor[myai[iai].armor1.nextrandomarmor];
-						myai[iai].armor1.protection = aiarmorpts[myai[iai].armor1.nextrandomarmor];
-						myai[iai].armor1.rangey = aiarmordistancey[myai[iai].armor1.nextrandomarmor];
-						myai[iai].armor1.rangex = aiarmordistancex[myai[iai].armor1.nextrandomarmor];
+						myai[iai].aiarmor.equiped = aiarmor[myai[iai].aiarmor.randomarmor[1]];
+						myai[iai].aiarmor.protection = aiarmorpts[myai[iai].aiarmor.randomarmor[1]];
+						myai[iai].aiarmor.rangey = aiarmordistancey[myai[iai].aiarmor.randomarmor[1]];
+						myai[iai].aiarmor.rangex = aiarmordistancex[myai[iai].aiarmor.randomarmor[1]];
 					}
 
 					if (u == 3)
 					{
-						myai[iai].armor1.equiped = aiarmor[myai[iai].armor1.nextrandomarmor2];
-						myai[iai].armor1.protection = aiarmorpts[myai[iai].armor1.nextrandomarmor2];
-						myai[iai].armor1.rangey = aiarmordistancey[myai[iai].armor1.nextrandomarmor2];
-						myai[iai].armor1.rangex = aiarmordistancex[myai[iai].armor1.nextrandomarmor2];
+						myai[iai].aiarmor.equiped = aiarmor[myai[iai].aiarmor.randomarmor[2]];
+						myai[iai].aiarmor.protection = aiarmorpts[myai[iai].aiarmor.randomarmor[2]];
+						myai[iai].aiarmor.rangey = aiarmordistancey[myai[iai].aiarmor.randomarmor[2]];
+						myai[iai].aiarmor.rangex = aiarmordistancex[myai[iai].aiarmor.randomarmor[2]];
 					}
 				}
 
@@ -3626,102 +3627,102 @@ beginning:
 				{
 					if (twoplayers != 1)
 					{
-						myai[j].armor1.equiped = aiarmor[myai[j].armor1.randomarmor];
-						myai[j].armor1.rangey = aiarmordistancey[myai[j].armor1.randomarmor];
-						myai[j].armor1.rangex = aiarmordistancex[myai[j].armor1.randomarmor];
-						myai[j].armor1.protection = aiarmorpts[myai[j].armor1.randomarmor];
+						myai[j].aiarmor.equiped = aiarmor[myai[j].aiarmor.randomarmor[0]];
+						myai[j].aiarmor.rangey = aiarmordistancey[myai[j].aiarmor.randomarmor[0]];
+						myai[j].aiarmor.rangex = aiarmordistancex[myai[j].aiarmor.randomarmor[0]];
+						myai[j].aiarmor.protection = aiarmorpts[myai[j].aiarmor.randomarmor[0]];
 
-						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].armor1.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].armor1.rangex) && myai[j].armor1.protection > aiarmorprotection)
+						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].aiarmor.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].aiarmor.rangex) && myai[j].aiarmor.protection > aiarmorprotection)
 						{
-							aiarmorprotection = aiarmorpts[myai[j].armor1.randomarmor];
-							thearmorchoose = myai[j].armor1.randomarmor;
+							aiarmorprotection = aiarmorpts[myai[j].aiarmor.randomarmor[0]];
+							thearmorchoose = myai[j].aiarmor.randomarmor[0];
 						}
 
-						myai[j].armor1.equiped = aiarmor[myai[j].armor1.nextrandomarmor];
-						myai[j].armor1.rangey = aiarmordistancey[myai[j].armor1.nextrandomarmor];
-						myai[j].armor1.rangex = aiarmordistancex[myai[j].armor1.nextrandomarmor];
-						myai[j].armor1.protection = aiarmorpts[myai[j].armor1.nextrandomarmor];
+						myai[j].aiarmor.equiped = aiarmor[myai[j].aiarmor.randomarmor[1]];
+						myai[j].aiarmor.rangey = aiarmordistancey[myai[j].aiarmor.randomarmor[1]];
+						myai[j].aiarmor.rangex = aiarmordistancex[myai[j].aiarmor.randomarmor[1]];
+						myai[j].aiarmor.protection = aiarmorpts[myai[j].aiarmor.randomarmor[1]];
 
-						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].armor1.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].armor1.rangex) && myai[j].armor1.protection > aiarmorprotection)
+						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].aiarmor.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].aiarmor.rangex) && myai[j].aiarmor.protection > aiarmorprotection)
 						{
-							aiarmorprotection = aiarmorpts[myai[j].armor1.nextrandomarmor];
-							thearmorchoose = myai[j].armor1.nextrandomarmor;
+							aiarmorprotection = aiarmorpts[myai[j].aiarmor.randomarmor[1]];
+							thearmorchoose = myai[j].aiarmor.randomarmor[1];
 						}
 
-						myai[j].armor1.equiped = aiarmor[myai[j].armor1.nextrandomarmor2];
-						myai[j].armor1.rangey = aiarmordistancey[myai[j].armor1.nextrandomarmor2];
-						myai[j].armor1.rangex = aiarmordistancex[myai[j].armor1.nextrandomarmor2];
-						myai[j].armor1.protection = aiarmorpts[myai[j].armor1.nextrandomarmor2];
+						myai[j].aiarmor.equiped = aiarmor[myai[j].aiarmor.randomarmor[2]];
+						myai[j].aiarmor.rangey = aiarmordistancey[myai[j].aiarmor.randomarmor[2]];
+						myai[j].aiarmor.rangex = aiarmordistancex[myai[j].aiarmor.randomarmor[2]];
+						myai[j].aiarmor.protection = aiarmorpts[myai[j].aiarmor.randomarmor[2]];
 
-						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].armor1.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].armor1.rangex) && myai[j].armor1.protection > aiarmorprotection)
+						if ((abs(myplayer[i].y - myai[j].y) <= myai[j].aiarmor.rangey) && (abs(myplayer[i].x - myai[j].x) <= myai[j].aiarmor.rangex) && myai[j].aiarmor.protection > aiarmorprotection)
 						{
-							aiarmorprotection = aiarmorpts[myai[j].armor1.nextrandomarmor2];
-							thearmorchoose = myai[j].armor1.nextrandomarmor2;
+							aiarmorprotection = aiarmorpts[myai[j].aiarmor.randomarmor[2]];
+							thearmorchoose = myai[j].aiarmor.randomarmor[2];
 						}
 
-						myai[j].armor1.equiped = aiarmor[thearmorchoose];
-						myai[j].armor1.rangey = aiarmordistancey[thearmorchoose];
-						myai[j].armor1.rangex = aiarmordistancex[thearmorchoose];
-						myai[j].armor1.protection = aiarmorpts[thearmorchoose];
+						myai[j].aiarmor.equiped = aiarmor[thearmorchoose];
+						myai[j].aiarmor.rangey = aiarmordistancey[thearmorchoose];
+						myai[j].aiarmor.rangex = aiarmordistancex[thearmorchoose];
+						myai[j].aiarmor.protection = aiarmorpts[thearmorchoose];
 
 						if (thearmorchoose == -1)
 						{
-							myai[j].armor1.equiped = aiarmor[myai[j].armor1.randomarmor];
-							myai[j].armor1.rangey = aiarmordistancey[myai[j].armor1.randomarmor];
-							myai[j].armor1.rangex = aiarmordistancex[myai[j].armor1.randomarmor];
-							myai[j].armor1.protection = aiarmorpts[myai[j].armor1.randomarmor];
+							myai[j].aiarmor.equiped = aiarmor[myai[j].aiarmor.randomarmor[0]];
+							myai[j].aiarmor.rangey = aiarmordistancey[myai[j].aiarmor.randomarmor[0]];
+							myai[j].aiarmor.rangex = aiarmordistancex[myai[j].aiarmor.randomarmor[0]];
+							myai[j].aiarmor.protection = aiarmorpts[myai[j].aiarmor.randomarmor[0]];
 						}
 
-						myai[j].magic1.equiped = aimagicitems[myai[j].magic1.randommagic];
-						myai[j].magic1.rangey = aimagicdistance[myai[j].magic1.randommagic];
-						myai[j].magic1.rangex = aimagicdistance[myai[j].magic1.randommagic];
-						myai[j].magic1.damage = aimagicdamage[myai[j].magic1.randommagic];
-						myai[j].magic1.cost = aimagiccost[myai[j].magic1.randommagic];
+						myai[j].aimagic.equiped = aimagicitems[myai[j].aimagic.randommagic[0]];
+						myai[j].aimagic.rangey = aimagicdistance[myai[j].aimagic.randommagic[0]];
+						myai[j].aimagic.rangex = aimagicdistance[myai[j].aimagic.randommagic[0]];
+						myai[j].aimagic.damage = aimagicdamage[myai[j].aimagic.randommagic[0]];
+						myai[j].aimagic.cost = aimagiccost[myai[j].aimagic.randommagic[0]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].magic1.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].magic1.rangex && (myai[j].magicpoints - myai[j].magic1.cost) >= 0)
+						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].aimagic.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].aimagic.rangex && (myai[j].magicpoints - myai[j].aimagic.cost) >= 0)
 						{
-							if (myai[j].magic1.damage > aimagicdamage2)
+							if (myai[j].aimagic.damage > aimagicdamage2)
 							{
-								aimagicdamage2 = aimagicdamage[myai[j].magic1.randommagic];
-								themagicchoose = myai[j].magic1.randommagic;
+								aimagicdamage2 = aimagicdamage[myai[j].aimagic.randommagic[0]];
+								themagicchoose = myai[j].aimagic.randommagic[0];
 								t = j;
 							}
 						}
 
-						myai[j].magic1.equiped = aimagicitems[myai[j].magic1.nextrandommagic];
-						myai[j].magic1.rangey = aimagicdistance[myai[j].magic1.nextrandommagic];
-						myai[j].magic1.rangex = aimagicdistance[myai[j].magic1.nextrandommagic];
-						myai[j].magic1.damage = aimagicdamage[myai[j].magic1.nextrandommagic];
-						myai[j].magic1.cost = aimagiccost[myai[j].magic1.nextrandommagic];
+						myai[j].aimagic.equiped = aimagicitems[myai[j].aimagic.randommagic[1]];
+						myai[j].aimagic.rangey = aimagicdistance[myai[j].aimagic.randommagic[1]];
+						myai[j].aimagic.rangex = aimagicdistance[myai[j].aimagic.randommagic[1]];
+						myai[j].aimagic.damage = aimagicdamage[myai[j].aimagic.randommagic[1]];
+						myai[j].aimagic.cost = aimagiccost[myai[j].aimagic.randommagic[1]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].magic1.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].magic1.rangex && (myai[j].magicpoints - myai[j].magic1.cost) >= 0)
+						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].aimagic.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].aimagic.rangex && (myai[j].magicpoints - myai[j].aimagic.cost) >= 0)
 						{
-							if (myai[j].magic1.damage > aimagicdamage2)
+							if (myai[j].aimagic.damage > aimagicdamage2)
 							{
-								aimagicdamage2 = aimagicdamage[myai[j].magic1.nextrandommagic];
-								themagicchoose = myai[j].magic1.nextrandommagic;
+								aimagicdamage2 = aimagicdamage[myai[j].aimagic.randommagic[1]];
+								themagicchoose = myai[j].aimagic.randommagic[1];
 								t = j;
 							}
 						}
 
-						myai[j].magic1.equiped = aimagicitems[myai[j].magic1.nextrandommagic2];
-						myai[j].magic1.rangey = aimagicdistance[myai[j].magic1.nextrandommagic2];
-						myai[j].magic1.rangex = aimagicdistance[myai[j].magic1.nextrandommagic2];
-						myai[j].magic1.damage = aimagicdamage[myai[j].magic1.nextrandommagic2];
-						myai[j].magic1.cost = aimagiccost[myai[j].magic1.nextrandommagic2];
+						myai[j].aimagic.equiped = aimagicitems[myai[j].aimagic.randommagic[2]];
+						myai[j].aimagic.rangey = aimagicdistance[myai[j].aimagic.randommagic[2]];
+						myai[j].aimagic.rangex = aimagicdistance[myai[j].aimagic.randommagic[2]];
+						myai[j].aimagic.damage = aimagicdamage[myai[j].aimagic.randommagic[2]];
+						myai[j].aimagic.cost = aimagiccost[myai[j].aimagic.randommagic[2]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].magic1.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].magic1.rangex && (myai[j].magicpoints - myai[j].magic1.cost) >= 0)
+						if ((positionydiff = abs(myplayer[i].y - myai[j].y)) <= myai[j].aimagic.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myai[j].aimagic.rangex && (myai[j].magicpoints - myai[j].aimagic.cost) >= 0)
 						{
-							if (myai[j].magic1.damage > aimagicdamage2)
+							if (myai[j].aimagic.damage > aimagicdamage2)
 							{
-								aimagicdamage2 = aimagicdamage[myai[j].magic1.nextrandommagic2];
-								themagicchoose = myai[j].magic1.nextrandommagic2;
+								aimagicdamage2 = aimagicdamage[myai[j].aimagic.randommagic[2]];
+								themagicchoose = myai[j].aimagic.randommagic[2];
 								t = j;
 							}
 						}
 					}
 					
-					if ((t == -1) && (positionydiff = abs(myplayer[i].y - myai[j].y)) <= myplayer[i].magic1.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myplayer[i].magic1.rangex)
+					if ((t == -1) && (positionydiff = abs(myplayer[i].y - myai[j].y)) <= myplayer[i].playermagic.rangey && (positionxdiff = abs(myplayer[i].x - myai[j].x)) <= myplayer[i].playermagic.rangex)
 					{
 						t = j;
 					}
@@ -3730,19 +3731,19 @@ beginning:
 					{
 						if (themagicchoose != -1)
 						{
-							myai[j].magic1.equiped = aimagicitems[themagicchoose];
-							myai[j].magic1.rangey = aimagicdistance[themagicchoose];
-							myai[j].magic1.rangex = aimagicdistance[themagicchoose];
-							myai[j].magic1.damage = aimagicdamage[themagicchoose];
-							myai[j].magic1.cost = aimagiccost[themagicchoose];
+							myai[j].aimagic.equiped = aimagicitems[themagicchoose];
+							myai[j].aimagic.rangey = aimagicdistance[themagicchoose];
+							myai[j].aimagic.rangex = aimagicdistance[themagicchoose];
+							myai[j].aimagic.damage = aimagicdamage[themagicchoose];
+							myai[j].aimagic.cost = aimagiccost[themagicchoose];
 						}
 						else
 						{
-							myai[j].magic1.equiped = aimagicitems[myai[j].magic1.randommagic];
-							myai[j].magic1.rangey = aimagicdistance[myai[j].magic1.randommagic];
-							myai[j].magic1.rangex = aimagicdistance[myai[j].magic1.randommagic];
-							myai[j].magic1.damage = aimagicdamage[myai[j].magic1.randommagic];
-							myai[j].magic1.cost = aimagiccost[myai[j].magic1.randommagic];
+							myai[j].aimagic.equiped = aimagicitems[myai[j].aimagic.randommagic[0]];
+							myai[j].aimagic.rangey = aimagicdistance[myai[j].aimagic.randommagic[0]];
+							myai[j].aimagic.rangex = aimagicdistance[myai[j].aimagic.randommagic[0]];
+							myai[j].aimagic.damage = aimagicdamage[myai[j].aimagic.randommagic[0]];
+							myai[j].aimagic.cost = aimagiccost[myai[j].aimagic.randommagic[0]];
 						}
 					}
 				}
@@ -3760,23 +3761,23 @@ beginning:
 						{
 							p = t;
 
-							if((myai[p].magicpoints >= myai[p].magic1.cost) && (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myai[p].magic1.rangey && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myai[p].magic1.rangex && inputcompare(ch, 'm') && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0)
+							if((myai[p].magicpoints >= myai[p].aimagic.cost) && (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myai[p].aimagic.rangey && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myai[p].aimagic.rangex && inputcompare(ch, 'm') && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0)
 							{
 								if(j == i)
 								{
-									if((abs(myplayer[j].y - myai[p].y) <= myai[p].armor1.rangey) && (abs(myplayer[j].x - myai[p].x) <= myai[p].armor1.rangex))
+									if((abs(myplayer[j].y - myai[p].y) <= myai[p].aiarmor.rangey) && (abs(myplayer[j].x - myai[p].x) <= myai[p].aiarmor.rangex))
 									{
-										myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].magicattack + myplayer[j].character1.magicresist + myplayer[j].armor1.protection;
+										myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].magicattack + myplayer[j].playercharacter.magicresist + myplayer[j].playerarmor.protection;
 									}
 									else
 									{
-										myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].magicattack + myplayer[j].character1.magicresist;
+										myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].magicattack + myplayer[j].playercharacter.magicresist;
 									}
 								}
 
 								if(i == j)
 								{
-									myai[p].magicpoints = myai[p].magicpoints - myai[p].magic1.cost;
+									myai[p].magicpoints = myai[p].magicpoints - myai[p].aimagic.cost;
 								}
 
 								for(int k = 0; k < maxplayers; k++)
@@ -3820,11 +3821,11 @@ beginning:
 
 							if(j == i)
 							{
-								if((myplayer[j].magicpoints >= myplayer[j].magic1.cost) && (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myplayer[j].magic1.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myplayer[j].magic1.rangex && inputcompare(ch, 'm') && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0)
+								if((myplayer[j].magicpoints >= myplayer[j].playermagic.cost) && (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myplayer[j].playermagic.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myplayer[j].playermagic.rangex && inputcompare(ch, 'm') && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0)
 								{
-									myai[p].hitpoints = myai[p].hitpoints - myplayer[j].magicattack + myai[p].character1.magicresist;
+									myai[p].hitpoints = myai[p].hitpoints - myplayer[j].magicattack + myai[p].aicharacter.magicresist;
 						
-									myplayer[j].magicpoints = myplayer[j].magicpoints - myplayer[j].magic1.cost;
+									myplayer[j].magicpoints = myplayer[j].magicpoints - myplayer[j].playermagic.cost;
 					
 									for(int k = 0; k < maxenemies; k++)
 									{
@@ -3865,99 +3866,99 @@ beginning:
 
 					if (twoplayers != 1)
 					{
-						myai[p].shieldstype.equiped = itemdamageenemies[myai[p].shieldstype.randomshield];
-						myai[p].shieldstype.damage = shielddamageenemies[myai[p].shieldstype.randomshield];
+						myai[p].aishield.equiped = itemdamageenemies[myai[p].aishield.randomshield[0]];
+						myai[p].aishield.damage = shielddamageenemies[myai[p].aishield.randomshield[0]];
 
-						if (myai[p].shieldstype.damage > aishieldweapon)
+						if (myai[p].aishield.damage > aishieldweapon)
 						{
-							thechooseshield = myai[p].shieldstype.randomshield;
-							aishieldweapon = shielddamageenemies[myai[p].shieldstype.randomshield];
+							thechooseshield = myai[p].aishield.randomshield[0];
+							aishieldweapon = shielddamageenemies[myai[p].aishield.randomshield[0]];
 						}
 
-						myai[p].shieldstype.equiped = itemdamageenemies[myai[p].shieldstype.nextrandomshield];
-						myai[p].shieldstype.damage = shielddamageenemies[myai[p].shieldstype.nextrandomshield];
+						myai[p].aishield.equiped = itemdamageenemies[myai[p].aishield.randomshield[1]];
+						myai[p].aishield.damage = shielddamageenemies[myai[p].aishield.randomshield[1]];
 
-						if (myai[p].shieldstype.damage > aishieldweapon)
+						if (myai[p].aishield.damage > aishieldweapon)
 						{
-							thechooseshield = myai[p].shieldstype.nextrandomshield;
-							aishieldweapon = shielddamageenemies[myai[p].shieldstype.nextrandomshield];
+							thechooseshield = myai[p].aishield.randomshield[1];
+							aishieldweapon = shielddamageenemies[myai[p].aishield.randomshield[1]];
 						}
 
-						myai[p].shieldstype.equiped = itemdamageenemies[myai[p].shieldstype.nextrandomshield2];
-						myai[p].shieldstype.damage = shielddamageenemies[myai[p].shieldstype.nextrandomshield2];
+						myai[p].aishield.equiped = itemdamageenemies[myai[p].aishield.randomshield[2]];
+						myai[p].aishield.damage = shielddamageenemies[myai[p].aishield.randomshield[2]];
 
-						if (myai[p].shieldstype.damage > aishieldweapon)
+						if (myai[p].aishield.damage > aishieldweapon)
 						{
-							thechooseshield = myai[p].shieldstype.nextrandomshield2;
-							aishieldweapon = shielddamageenemies[myai[p].shieldstype.nextrandomshield2];
+							thechooseshield = myai[p].aishield.randomshield[2];
+							aishieldweapon = shielddamageenemies[myai[p].aishield.randomshield[2]];
 						}
 
-						myai[p].shieldstype.equiped = itemdamageenemies[thechooseshield];
-						myai[p].shieldstype.damage = shielddamageenemies[thechooseshield];
+						myai[p].aishield.equiped = itemdamageenemies[thechooseshield];
+						myai[p].aishield.damage = shielddamageenemies[thechooseshield];
 
-						myai[p].weapontype.equiped = itemenemies[myai[p].weapontype.randomweapon];
-						myai[p].weapontype.rangey = rangeyenemies[myai[p].weapontype.randomweapon];
-						myai[p].weapontype.rangex = rangexenemies[myai[p].weapontype.randomweapon];
-						myai[p].weapontype.damage = damageenemies[myai[p].weapontype.randomweapon];
+						myai[p].aiweapons.equiped = itemenemies[myai[p].aiweapons.randomweapon[0]];
+						myai[p].aiweapons.rangey = rangeyenemies[myai[p].aiweapons.randomweapon[0]];
+						myai[p].aiweapons.rangex = rangexenemies[myai[p].aiweapons.randomweapon[0]];
+						myai[p].aiweapons.damage = damageenemies[myai[p].aiweapons.randomweapon[0]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].weapontype.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].weapontype.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
+						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].aiweapons.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].aiweapons.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
 						{
-							if (myai[p].weapontype.damage > aiequipedweapon)
+							if (myai[p].aiweapons.damage > aiequipedweapon)
 							{
-								aiequipedweapon = myai[p].weapontype.damage;
-								thechoose = myai[p].weapontype.randomweapon;
+								aiequipedweapon = myai[p].aiweapons.damage;
+								thechoose = myai[p].aiweapons.randomweapon[0];
 							}
 						}
 
-						myai[p].weapontype.equiped = itemenemies[myai[p].weapontype.nextrandomweapon];
-						myai[p].weapontype.rangey = rangeyenemies[myai[p].weapontype.nextrandomweapon];
-						myai[p].weapontype.rangex = rangexenemies[myai[p].weapontype.nextrandomweapon];
-						myai[p].weapontype.damage = damageenemies[myai[p].weapontype.nextrandomweapon];
+						myai[p].aiweapons.equiped = itemenemies[myai[p].aiweapons.randomweapon[1]];
+						myai[p].aiweapons.rangey = rangeyenemies[myai[p].aiweapons.randomweapon[1]];
+						myai[p].aiweapons.rangex = rangexenemies[myai[p].aiweapons.randomweapon[1]];
+						myai[p].aiweapons.damage = damageenemies[myai[p].aiweapons.randomweapon[1]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].weapontype.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].weapontype.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
+						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].aiweapons.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].aiweapons.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
 						{
-							if (myai[i].weapontype.damage > aiequipedweapon)
+							if (myai[i].aiweapons.damage > aiequipedweapon)
 							{
-								aiequipedweapon = myai[p].weapontype.damage;
-								thechoose = myai[p].weapontype.nextrandomweapon;
+								aiequipedweapon = myai[p].aiweapons.damage;
+								thechoose = myai[p].aiweapons.randomweapon[1];
 							}
 						}
 
-						myai[p].weapontype.equiped = itemenemies[myai[p].weapontype.nextrandomweapon2];
-						myai[p].weapontype.rangey = rangeyenemies[myai[p].weapontype.nextrandomweapon2];
-						myai[p].weapontype.rangex = rangexenemies[myai[p].weapontype.nextrandomweapon2];
-						myai[p].weapontype.damage = damageenemies[myai[p].weapontype.nextrandomweapon2];
+						myai[p].aiweapons.equiped = itemenemies[myai[p].aiweapons.randomweapon[2]];
+						myai[p].aiweapons.rangey = rangeyenemies[myai[p].aiweapons.randomweapon[2]];
+						myai[p].aiweapons.rangex = rangexenemies[myai[p].aiweapons.randomweapon[2]];
+						myai[p].aiweapons.damage = damageenemies[myai[p].aiweapons.randomweapon[2]];
 
-						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].weapontype.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].weapontype.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
+						if ((positionydiff = abs(myplayer[i].y - myai[p].y)) <= myai[p].aiweapons.rangey && (positionxdiff = abs(myplayer[i].x - myai[p].x)) <= myai[p].aiweapons.rangex && myai[p].hitpoints > 0 && myplayer[i].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
 						{
-							if (myai[i].weapontype.damage > aiequipedweapon)
+							if (myai[i].aiweapons.damage > aiequipedweapon)
 							{
-								aiequipedweapon = myai[p].weapontype.damage;
-								thechoose = myai[p].weapontype.nextrandomweapon2;
+								aiequipedweapon = myai[p].aiweapons.damage;
+								thechoose = myai[p].aiweapons.randomweapon[2];
 							}
 						}
 
 						if (thechoose != -1)
 						{
-							myai[p].weapontype.equiped = itemenemies[thechoose];
-							myai[p].weapontype.rangey = rangeyenemies[thechoose];
-							myai[p].weapontype.rangex = rangexenemies[thechoose];
-							myai[p].weapontype.damage = damageenemies[thechoose];
+							myai[p].aiweapons.equiped = itemenemies[thechoose];
+							myai[p].aiweapons.rangey = rangeyenemies[thechoose];
+							myai[p].aiweapons.rangex = rangexenemies[thechoose];
+							myai[p].aiweapons.damage = damageenemies[thechoose];
 						}
 						else
 						{
-							myai[p].weapontype.equiped = itemenemies[myai[p].weapontype.randomweapon];
-							myai[p].weapontype.rangey = rangeyenemies[myai[p].weapontype.randomweapon];
-							myai[p].weapontype.rangex = rangexenemies[myai[p].weapontype.randomweapon];
-							myai[p].weapontype.damage = damageenemies[myai[p].weapontype.randomweapon];
+							myai[p].aiweapons.equiped = itemenemies[myai[p].aiweapons.randomweapon[0]];
+							myai[p].aiweapons.rangey = rangeyenemies[myai[p].aiweapons.randomweapon[0]];
+							myai[p].aiweapons.rangex = rangexenemies[myai[p].aiweapons.randomweapon[0]];
+							myai[p].aiweapons.damage = damageenemies[myai[p].aiweapons.randomweapon[0]];
 						}
 					}
 
 					if(j == i)
 					{
-						if( (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myplayer[j].weapontype.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myplayer[j].weapontype.rangex && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
+						if( (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myplayer[j].playerweapons.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myplayer[j].playerweapons.rangex && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
 						{	
-							myai[p].hitpoints = myai[p].hitpoints - myplayer[j].weapontype.damage - myplayer[j].character1.attack + myai[p].shieldstype.damage + myai[p].defensepoints;
+							myai[p].hitpoints = myai[p].hitpoints - myplayer[j].playerweapons.damage - myplayer[j].playercharacter.attack + myai[p].aishield.damage + myai[p].defensepoints;
 					
 							for(int k = 0; k < maxenemies; k++)
 							{
@@ -3978,9 +3979,9 @@ beginning:
 
 					if(j == i)
 					{
-						if( (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myai[p].weapontype.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myai[p].weapontype.rangex && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
+						if( (positionydiff = abs(myplayer[j].y - myai[p].y)) <= myai[p].aiweapons.rangey  && (positionxdiff = abs(myplayer[j].x - myai[p].x)) <= myai[p].aiweapons.rangex && myai[p].hitpoints > 0 && myplayer[j].hitpoints > 0 && (inputcompare(ch, 'a') || inputcompare(ch, 'd') || inputcompare(ch, 'w') || inputcompare(ch, 's')))
 						{	
-							myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].weapontype.damage - myai[p].character1.attack + myplayer[j].shieldstype.damage + myplayer[j].defensepoints;
+							myplayer[j].hitpoints = myplayer[j].hitpoints - myai[p].aiweapons.damage - myai[p].aicharacter.attack + myplayer[j].playershield.damage + myplayer[j].defensepoints;
 
 							for(int k = 0; k < maxplayers; k++)
 							{
@@ -4129,7 +4130,7 @@ beginning:
 			{
 				if((hitpointspos1.y + i) > positiony)
 				{
-					videoprinterstats(hitpointspos1.y + i - positiony, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].character1.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].weapontype.damage + myplayer[i].character1.attack, myplayer[i].magic1.equiped, myplayer[i].magic1.damage, myplayer[i].defensepoints + myplayer[i].shieldstype.damage, myplayer[i].weapontype.equiped, myplayer[i].shieldstype.equiped, myplayer[i].armor1.equiped, myplayer[i].armor1.protection);
+					videoprinterstats(hitpointspos1.y + i - positiony, 0, "Player %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myplayer[i].count, myplayer[i].playercharacter.character, myplayer[i].hitpoints, myplayer[i].magicpoints, myplayer[i].playerweapons.damage + myplayer[i].playercharacter.attack, myplayer[i].playermagic.equiped, myplayer[i].playermagic.damage, myplayer[i].defensepoints + myplayer[i].playershield.damage, myplayer[i].playerweapons.equiped, myplayer[i].playershield.equiped, myplayer[i].playerarmor.equiped, myplayer[i].playerarmor.protection);
 				}
 			}
 
@@ -4137,7 +4138,7 @@ beginning:
 			{
 				if((hitpointspos1.ay + i) >= (positiony) && (positiony > (maxenemies)))
 				{
-					videoprinterstats(hitpointspos1.ay + i - positiony, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[i].count, myai[i].character1.character, myai[i].hitpoints, myai[i].magicpoints, myai[i].weapontype.damage + myai[i].character1.attack, myai[i].magic1.equiped, myai[i].magic1.damage, myai[i].defensepoints + myai[i].shieldstype.damage, myai[i].weapontype.equiped, myai[i].shieldstype.equiped, myai[i].armor1.equiped, myai[i].armor1.protection);
+					videoprinterstats(hitpointspos1.ay + i - positiony, 0, "AI %d is %s hp:%d mp:%d at:%d ma:%s %d def:%d w:%s sh:%s ar:%s md:%d", myai[i].count, myai[i].aicharacter.character, myai[i].hitpoints, myai[i].magicpoints, myai[i].aiweapons.damage + myai[i].aicharacter.attack, myai[i].aimagic.equiped, myai[i].aimagic.damage, myai[i].defensepoints + myai[i].aishield.damage, myai[i].aiweapons.equiped, myai[i].aishield.equiped, myai[i].aiarmor.equiped, myai[i].aiarmor.protection);
 				}
 			}
 
