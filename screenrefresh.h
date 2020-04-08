@@ -2,7 +2,11 @@
 #define __SCREENREFRESH_H
 
 #ifdef INITNCURSESNOW
+#ifdef INITNCURSESNOW2
 #include <ncurses.h>
+#else
+#include <curses.h>
+#endif
 #endif
 
 #ifdef INITLIBTCODNOW

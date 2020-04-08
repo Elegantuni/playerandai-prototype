@@ -7,7 +7,7 @@
 
 #include <tchar.h>
 
-int fileExists(const char *file);
+int fileExists(const wchar_t* file);
 
 #endif
 

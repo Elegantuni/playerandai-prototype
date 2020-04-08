@@ -5,8 +5,8 @@
 #include <libtcod/libtcod.h>
 #endif
 
-#ifndef INITLIBTCODNOW
 #ifdef INITNCURSESNOW
+#ifdef INITNCURSESNOW2
 #include <ncurses.h>
 #else
 #include <curses.h>
