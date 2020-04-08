@@ -340,6 +340,194 @@ beginning:
 		struct aicharacter *myai = (struct aicharacter *) malloc(sizeof(struct aicharacter) * maxenemies);
 #endif
 
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].weapon = (char*)malloc(sizeof(char) * lineamount);
+			myplayer[i].shield = (char*)malloc(sizeof(char) * lineamount);
+			myplayer[i].charactersign = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].weapon = (char*)malloc(sizeof(char) * lineamount);
+
+			myai[i].shield = (char*)malloc(sizeof(char) * lineamount);
+
+			myai[i].charactersign = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			for(int j = 0; j < WEAPONSAMOUNT; j++)
+			{
+				myplayer[i].playerweapons.item[j] = (char*)malloc(sizeof(char) * lineamount);
+				myplayer[i].playerweapons.durability[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playerweaponsdamage.item = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			for(int j = 0; j < STATUSEFFECTSAMOUNT; j++)
+			{
+				myplayer[i].playerweapons.statuseffects[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playerweaponsdamage.item = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			for(int j = 0; j < THIEFINGITEMAMOUNT; j++)
+			{
+				myplayer[i].playerthiefing.what_able_steal[j] = (char*)malloc(sizeof(char) * lineamount);
+				myplayer[i].playerthiefing.what_others_steal[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playershield.equiped = (char*)malloc(sizeof(char) * lineamount);
+			
+			for(int j = 0; j < SHIELDAMOUNT; j++)
+			{
+				myplayer[i].playershield.item[j] = (char*)malloc(sizeof(char) * lineamount);
+				
+				myplayer[i].playershield.randomshield[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playershielddamage.item = (char*)malloc(sizeof(char) * lineamount);
+			
+			myplayer[i].playershielddamage.damage = (int*)malloc(sizeof(int) * allitems);
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playercharacter.character = (char*)malloc(sizeof(char) * lineamount);
+			
+			myplayer[i].playercharacter.sign = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playermagic.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < MAGICAMOUNT; j++)
+			{
+				myplayer[i].playermagic.magicitems[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			myplayer[i].playerarmor.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < ARMORAMOUNT; j++)
+			{
+				myplayer[i].playerarmor.item[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxplayers; i++)
+		{
+			for(int j = 0; j < CLASSAMOUNT; j++)
+			{
+				myplayer[i].playerclass.type_of_class[j] = (char*)malloc(sizeof(char) * lineamount);
+
+				myplayer[i].playerclass.switchable_to[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aiweapons.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < allitemsenemies; j++)
+			{
+				myai[i].aiweapons.item[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aiweaponsdamage.item = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			for(int j = 0; j < THIEFINGITEMAMOUNT; j++)
+			{
+				myai[i].aithiefing.what_able_steal[j] = (char*)malloc(sizeof(char) * lineamount);
+
+				myai[i].aithiefing.what_others_steal[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aishield.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < SHIELDAMOUNT; j++)
+			{
+				myai[i].aishield.item[j] = (char*)malloc(sizeof(char) * lineamount);
+				
+				myai[i].aishield.randomshield[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aishielddamage.item = (char*)malloc(sizeof(char) * lineamount);
+
+			myai[i].aishielddamage.damage = (int*)malloc(sizeof(int) * allitems);
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aicharacter.character = (char*)malloc(sizeof(char) * lineamount);
+
+			myai[i].aicharacter.sign = (char*)malloc(sizeof(char) * lineamount);
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aimagic.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < MAGICAMOUNT; j++)
+			{
+				myai[i].aimagic.magicitems[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			myai[i].aiarmor.equiped = (char*)malloc(sizeof(char) * lineamount);
+
+			for(int j = 0; j < ARMORAMOUNT; j++)
+			{
+				myai[i].aiarmor.item[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
+
+		for(int i = 0; i < maxenemies; i++)
+		{
+			for(int j = 0; j < CLASSAMOUNT; j++)
+			{
+				myai[i].aiclass.type_of_class[j] = (char*)malloc(sizeof(char) * lineamount);
+
+				myai[i].aiclass.switchable_to[j] = (char*)malloc(sizeof(char) * lineamount);
+			}
+		}
 
 		for(int i = 0; i < maxplayers; i++)
 		{

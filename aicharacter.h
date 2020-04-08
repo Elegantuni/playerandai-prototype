@@ -40,7 +40,7 @@ struct aicharacter
 	struct character aicharacter;
 	struct magic aimagic;
 	struct armor aiarmor;
-	struct classes aiclasses;
+	struct classes aiclass;
 	struct jobs aijob;
 };
 
