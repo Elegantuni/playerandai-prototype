@@ -10,6 +10,10 @@
 #include "character.h"
 #include "weaponsdamage.h"
 #include "picturestruct.h"
+#include "shields.h"
+#include "magic.h"
+#include "shieldsdamage.h"
+#include "armor.h"
 
 struct player
 {

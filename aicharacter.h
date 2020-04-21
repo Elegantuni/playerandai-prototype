@@ -7,7 +7,13 @@
 #include "thiefing.h"
 #include "classes.h"
 #include "jobs.h"
+#include "character.h"
+#include "picturestruct.h"
+#include "shields.h"
+#include "magic.h"
+#include "armor.h"
 #include "weaponsdamageenemies.h"
+#include "shieldsdamageenemies.h"
 
 struct aicharacter
 {

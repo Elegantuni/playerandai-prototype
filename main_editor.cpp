@@ -3,8 +3,8 @@
 #include <cstring>
 using namespace std;
 
-//#include "player.h"
-//#include "aicharacter.h"
+#include "player.h"
+#include "aicharacter.h"
 
 void readfiletest(FILE *fp1);
 
