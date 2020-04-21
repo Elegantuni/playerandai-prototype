@@ -9,12 +9,14 @@
 #include "jobs.h"
 #include "character.h"
 #include "weaponsdamage.h"
+#include "picturestruct.h"
 
 struct player
 {
 	int thenumber;
 	int y;
 	int x;
+	struct picturestruct playerpiccoord;
 	int hitpoints;
 	int magicpoints;
 	int defensepoints;

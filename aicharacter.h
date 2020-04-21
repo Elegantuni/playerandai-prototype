@@ -14,6 +14,7 @@ struct aicharacter
 	int thenumber;
 	int y;
 	int x;
+	struct picturestruct aipiccoord;
 	int hitpoints;
 	int magicpoints;
 	int defensepoints;
