@@ -1,2 +1,4 @@
 // File used to configure editor
 
+world_size_width=1920
+world_size_height=1080
