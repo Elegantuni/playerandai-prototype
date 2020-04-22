@@ -8,7 +8,7 @@ using namespace std;
 #include "aicharacter.h"
 
 void readfiletest(FILE *fp1);
-void processeditorconfigint(FILE *fp1, const char* datatype, int* thedata, std::string searchfor);
+void processeditorconfigint(FILE *fp1, int* thedata, std::string searchfor);
 
 struct worldsize
 {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		fp1 = fopen("Config/playerandai-prototype-version-2.txt", "r");
 	}
 
-	processeditorconfigint(fp1, thetype, &theworldsize.width, "world_size_width");
+	processeditorconfigint(fp1, &theworldsize.width, "world_size_width");
 
 	printf("%d\n", theworldsize.width);
 	
@@ -58,7 +58,7 @@ void readfiletest(FILE *fp1)
 	}
 }
 
-void processeditorconfigint(FILE *fp1, const char* datatype, int *thedata, std::string searchfor)
+void processeditorconfigint(FILE *fp1, int *thedata, std::string searchfor)
 {
 	const int arbsize = 100;
 		
@@ -102,7 +102,7 @@ void processeditorconfigint(FILE *fp1, const char* datatype, int *thedata, std::
 				}
 
 				*thedata = (int)strtol(temp, NULL, 10);
-
+				
 				return;
 			}
 			else
